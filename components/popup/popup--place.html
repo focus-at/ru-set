@@ -1,0 +1,9 @@
+<h2 class="r-popupTitle">Выбрать место</h2>
+<p>Места на схеме могут не совпадать с реальным расположением мест в автобусе.</p>
+<div class="r-radioRound" ng-if="popup.autoSeatSelection">
+    <input id="anyPlace" class="r-visuallyhidden" type="radio" ng-click="popup.select()" ng-checked="!popup.current.seatNumber">
+    <label for="anyPlace">Назначить любое</label>
+</div>
+<ul class="r-placesContainer" ng-if="popup.seatNumbers">
+  <li ng-repeat="(value, disabled) in popup.seats" ng-click="popup.select(value)"><span ng-class="{'r-disable': disabled, 'r-active': popup.current.seatNumber == value}">{{value}}</span></li>
+</ul>

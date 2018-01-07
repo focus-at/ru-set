@@ -1,0 +1,132 @@
+<!--
+<table ng-show="paymentList" style="width: 96%; margin-bottom: 20px; margin: 0 2% 20px;">
+  <tr ng-repeat="item in paymentList">
+    <td><input type="radio" name="payment" ng-model="paymentIndex" ng-value="{{$index}}"></td>
+    <td><img ng-src="{{item.logoUrl}}" alt=""></td>
+    <td><b>{{item.name}}</b><br>{{item.description}}</td>
+    <td>
+      <b>Комиссия:</b> {{item.commissionValue}} {{item.currency}} ({{item.comissionPercent}})%<br>
+      <b>Итого:</b> {{item.priceTotal}} {{item.currency}}<br>
+    </td>
+  </tr>
+</table>
+-->
+<div class="r-booking" ng-if="booking.paymentList" smooth-scroll scroll-if="{{!booking.noedit}}">
+  <article class="r-notif">
+      <header>
+          <h1>
+            Билеты забронированы!
+            <span>Осталось <span class="r-timeLeft" ng-bind="booking.expireSeconds | expire"></span> для оплаты поездки.</span>
+          </h1>
+      </header>
+      <p>Если данные верны, переходите к оплате. Если хотите что-то исправить, прокрутите вверх, измените данные и заново забронируйте билет.</p>
+  </article>
+  <header>
+      <h2 class="r-pageTitle">Заказ {{booking.bookingId}}</h2>
+  </header>
+  <article class="r-tripInfo">
+      <a class="r-editLink" ng-if="!booking.noedit" scroll-to="direction" offset="100">Изменить</a>
+      <div class="r-start">
+          <h3>Отправление</h3>
+          <div class="r-cityStation">
+              {{booking.orders[0].data.run.departureBusStop.name}}<span ng-if="booking.orders[0].data.run.departureBusStop.description">,<br> {{booking.orders[0].data.run.departureBusStop.description}}</span>
+          </div>
+          <div class="r-time">{{booking.orders[0].data.run.departureDateTime | date : 'H:mm'}} <span ng-if="timeWithTimezone(booking.orders[0].data.run.departureDateTime)">({{timeWithTimezone(booking.orders[0].data.run.departureDateTime)}})</span></div>
+          <div class="r-date">{{booking.orders[0].data.run.departureDateTime | date : 'd MMMM yyyy'}}</div>
+      </div>
+      <div class="r-timeTrip">
+          <h3>В пути</h3>
+          <div class="r-time">{{booking.orders[0].data.run.timeInWay | timeInWay}}</div>
+          <div class="r-line"></div>
+      </div>
+      <div class="r-finish">
+          <h3>Прибытие</h3>
+          <div class="r-cityStation">
+            {{booking.orders[0].data.run.arrivalBusStop.name}}<span ng-if="booking.orders[0].data.run.arrivalBusStop.description">,<br> {{booking.orders[0].data.run.arrivalBusStop.description}}</span>
+          </div>
+          <div class="r-time">{{booking.orders[0].data.run.arrivalDateTime | date : 'H:mm'}} <span ng-if="timeWithTimezone(booking.orders[0].data.run.arrivalDateTime)">({{timeWithTimezone(booking.orders[0].data.run.arrivalDateTime)}})</span></div>
+          <div class="r-date">{{booking.orders[0].data.run.arrivalDateTime | date : 'd MMMM yyyy'}}</div>
+      </div>
+  </article>
+  <article class="r-passengersInfo">
+      <a class="r-editLink" ng-if="!booking.noedit" scroll-to="registration" offset="100">Изменить</a>
+      <h3>Пассажиры</h3>
+      <div class="r-pass" ng-repeat="item in booking.orders[0].data.tickets">
+          <div class="r-section1">
+              {{item.passenger.surname}} {{item.passenger.name}} {{item.passenger.middleName}}
+              <span ng-if="item.passenger.documentNumber">{{item.passenger.documentNumber}}</span>
+          </div>
+          <div class="r-section2">
+              <span>{{item.tariffName}}</span>
+              Место {{item.seatNumber}}
+          </div>
+          <div class="r-section3" ng-bind="item.price | currency"></div>
+      </div>
+  </article>
+  <div class="r-groupWrapper">
+      <article class="r-trafficInfo">
+          <a class="r-editLink" ng-if="!booking.noedit" scroll-to="runs" offset="100">Изменить</a>
+          <h3>Транспорт</h3>
+          <div class="r-trf">
+              <h4>Рейс:</h4>
+              <p><font ng-if="booking.orders[0].data.run.runNumber">{{booking.orders[0].data.run.runNumber}}</font> {{booking.orders[0].data.run.runName}}</p>
+          </div>
+          <div class="r-trf" ng-if="booking.orders[0].data.run.transport || booking.orders[0].data.run.comment">
+              <h4>Автобус:</h4>
+              <p>{{booking.orders[0].data.run.transport}}<span ng-if="booking.orders[0].data.run.comment">({{booking.orders[0].data.run.comment}})</span></p>
+          </div>
+          <div class="r-trf" ng-if="booking.orders[0].data.run.carrier">
+              <h4>Перевозчик:</h4>
+              <p>{{booking.orders[0].data.run.carrier}}</p>
+          </div>
+      </article>
+      <article class="r-priceInfo">
+          <!--<div class="r-priceCalculate">
+              <span class="r-labelC">Стоимость:</span>
+              <span class="r-valueC">{{booking.orders[0].data.orderPrice.value | currency : 'руб.' : 0}}</span>
+          </div>-->
+          <div class="r-priceAdd">
+              <span class="r-labelC">Тариф:</span>
+              <span class="r-valueC" ng-bind="booking.orders[0].data.orderPrice.pricePart.tariff | currency"></span>
+          </div>
+          <div class="r-priceAdd">
+              <span class="r-labelC">Сервисный сбор:</span>
+              <span class="r-valueC" ng-bind="(booking.paymentList[booking.paymentIndex].paymentTotal - booking.orders[0].data.orderPrice.pricePart.tariff) | currency"></span>
+          </div>
+          <div class="r-priceFinal">
+              <span class="r-labelC">Итого к оплате:</span>
+              <span class="r-valueC">{{booking.paymentList[booking.paymentIndex].paymentTotal | currency}}</span>
+          </div>
+
+          <label class="r-agreement">
+            <input class="r-checkbox" type="checkbox" tabindex="699" name="agree" ng-model="agree" required>
+            <span class="r-checkbox__label icon-ok">Принимаю условия договора <a ng-click="$emit('popup', {event: $event, type: 'offer'})">оферты</a> и подтверждаю итоговую сумму к оплате, включая все налоги и сборы.</span>
+          </label>
+          <!--
+          <div class="r-agreement">
+              <div class="r-checkBox">
+                  <input id="agreement" class="r-visuallyhidden" type="checkbox" tabindex="800" ng-model="agree" required>
+                  <label for="agreement"><i></i>Принимаю условия договора <a ng-click="$emit('popup', {event: $event, type: 'offer'})">оферты</a> и подтверждаю итоговую сумму к оплате, включая все налоги и сборы.</label>
+              </div>
+          </div>
+        -->
+      </article>
+
+      <article class="r-getBackInfo">
+          <h3 class="link--dotted" ng-click="booking.showCondition=!booking.showCondition">Условия возврата</h3>
+          <p class="r-noBack" ng-show="booking.showCondition">{{booking.orders[0].data.run.refundConditions || 'Возврат билета невозможен для данного перевозчика.'}}</p>
+      </article>
+  </div>
+  <article class="r-contactInfo">
+      <a class="r-editLink" ng-if="!booking.noedit" scroll-to="contacts" offset="100">Изменить</a>
+      <h3>Контактные данные:</h3>
+      <div><i class="icon-mobile"></i>{{booking.recipientList[0].phone}}</div>
+      <div><i class="icon-mail"></i>{{booking.recipientList[0].email}}</div>
+  </article>
+  <!--<article class="r-note">
+      На всякий случай, мы выслали вам письмо с параметрами и такой же кнопкой. Если поездку оплачиваете НЕ вы, перешлите это письмо истинному плательщику. Или перешлите ему URL-адрес этой страницы.
+  </article>-->
+  <button type="submit" class="r-btn r-btnReserve" ng-hide="form.loader" ng-show="!error">Оплатить поездку</button>
+  <div class="r-wait-loader" ng-show="form.loader"></div>
+  <div ng-include="'notification/notification-info.html'" ng-show="error"></div>
+</div>

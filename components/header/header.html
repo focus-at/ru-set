@@ -1,0 +1,23 @@
+<div class="r-logo">
+    <a href="/" tabindex="-1" style="background-image: url({{logo}})" ng-init="this.$emit('send:header')"></a>
+</div>
+<div class="r-destinations" ng-if="query.departure && query.arrival">
+    <span class="r-from" ng-bind="header.departure"></span>
+    <span class="r-arrowBtn"></span>
+    <span class="r-to" ng-bind="header.arrival"></span>
+</div>
+<div class="r-date" ng-if="!query.payment && query.date">
+  {{query.date | dateFromString: 'd MMM'}}
+  <span class="r-day">{{query.date | dateFromString: 'EEEE'}}</span>
+</div>
+<!-- Passengers.count, Passengers.price-->
+<div class="r-passengers" ng-if="bookParams.info.count">
+    <span ng-bind="bookParams.info.count"></span> <span class="icon-user"></span>
+</div>
+<div class="r-price" ng-if="bookParams.info.count">
+    <span class="r-priceInner">{{bookParams.info.price}}<span class="r-cur">руб.</span> <!-- <span class="r-arrow"></span> --></span>
+</div>
+<!--
+<span class="r-hideDetails">Свернуть <i class="r-arrow"></i></span>
+<span class="r-showDetails">Показать детали <i class="r-arrow"></i></span>
+-->

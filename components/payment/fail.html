@@ -1,0 +1,8 @@
+<section class="r-wrapper" ng-if="text">
+    <div class="r-smallTip">Ошибка :(</div>
+    <h1 class="r-pageTitle">{{text}}</h1>
+    <article class="r-solutionsContainer" ng-if="booking.status != 'reserved'">
+        <h2>Что можно сделать:</h2>
+        <a href="/">Начать все сначала</a>
+    </article>
+</section>

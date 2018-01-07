@@ -1,0 +1,120 @@
+.header{
+  text-align: center;
+  background: #221e51;
+  padding: 10px 0;
+  z-index: 999;
+  color: #fff;
+}
+.header > div{
+  max-width: 1024px;
+  margin: 0 auto
+}
+.header__date{
+  display: inline-block;
+}
+
+.header__input{
+  display: inline-block;
+  font-size: 1.25rem !important;
+  width: 100%;
+  padding: 5px;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  color: inherit;
+  text-transform: capitalize;
+}
+.header__input--date{
+  display: none;
+  margin: 0 20px !important;
+}
+.header__input--submit{
+  padding: 0;
+  border: 0;
+  margin: 15px 20px 0 0;
+}
+.header__input--submit:before{
+  font-family: 'fontello';
+  content: '\e812';
+  color: #0db7ff;
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
+.header .r-pageTitle{
+  color: #fff;
+}
+.header__date__day{
+  display: inline-block;
+  font-size: .6875rem;
+  color: #82d0ff;
+}
+.header__passengers{
+  display: inline-block;
+  margin-right: 20px;
+}
+.header__passengers > .icon-user{
+  color: #0db7ff;
+}
+
+.header__price{
+  font-family: 'gotham_prolight';
+  display: inline-block;
+  font-size: 1.8rem;
+}
+.header__price__currency{
+  color: #0db7ff;
+  font-size: 1.563rem;
+}
+@media only screen and (min-width: 768px){
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .header__input{
+    width: auto;
+  }
+  .header__input--submit{
+    margin-top: 0 !important;
+  }
+  .header .direction__input__wr{
+    width: auto;
+  }
+  .header .direction__switcher {
+    margin: -18px 20px 0;
+  }
+  .header .autocomplete{
+    margin-top: 10px;
+  }
+  .header .calendar{
+    width: 387px;
+    position: absolute;
+    right: 0;
+    margin-top: 10px !important;
+    display: none;
+  }
+  .header__input:focus ~ .calendar{
+    display: block;
+  }
+  .header .r-pageTitle,
+  .header .r-subTitle{
+    display: none;
+  }
+  .header .calendar__day {
+    font-size: 1.125rem;
+  }
+  .header__input--submit:before{
+    transform: rotate(0) scaleX(-1);
+  }
+  .header__input--date{
+    display: inline-block;
+  }
+  .header__input--date:valid{
+    border-color: #44b72d;
+  }
+  .ng-submitted .header__input--date:invalid{
+    border-color: red;
+  }
+}

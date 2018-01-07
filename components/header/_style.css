@@ -1,0 +1,464 @@
+@font-face {
+  font-family: 'gotham_prolight';
+  src:url('../fonts/gothaprolig-webfont.eot');
+  src:url('../fonts/gothaprolig-webfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/gothaprolig-webfont.woff') format('woff'),
+      url('../fonts/gothaprolig-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gotham_proregular';
+  src:url('../fonts/gothaproreg-webfont.eot');
+  src:url('../fonts/gothaproreg-webfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/gothaproreg-webfont.woff') format('woff'),
+      url('../fonts/gothaproreg-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?86102819');
+  src: url('../fonts/fontello.eot?86102819#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?86102819') format('woff'),
+       url('../fonts/fontello.ttf?86102819') format('truetype'),
+       url('../fonts/fontello.svg?86102819#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+ font-family: "fontello";
+ font-style: normal;
+ font-weight: normal;
+ speak: none;
+
+ display: inline-block;
+ text-decoration: inherit;
+ width: 1em;
+ margin-right: .2em;
+ text-align: center;
+ /* opacity: .8; */
+
+ /* For safety - reset parent styles, that can break glyph codes*/
+ font-variant: normal;
+ text-transform: none;
+
+ /* fix buttons height, for twitter bootstrap */
+ line-height: 1em;
+
+ /* Animation center compensation - margins should be symmetric */
+ /* remove if not needed */
+ margin-left: .2em;
+
+ /* you can be more comfortable with increased icons size */
+ /* font-size: 120%; */
+
+ /* Font smoothing. That was taken from TWBS */
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+
+ /* Uncomment for 3D effect */
+ /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-user:before{
+  content: '\e800';
+}
+.icon-left-open-big:before{
+  content: '\e812';
+}
+.ruset-default{
+  left: 0;
+  right: 0;
+  font-family: 'gotham_proregular';
+  z-index: 9002;
+}
+.ruset-default .r-topBar .icon-user{
+  color: #0db7ff;
+  font-size: 1rem;
+}
+.ruset-default .r-topBar {
+  height: 36px;
+  background: #221e51;
+  font-size: 0;
+}
+.ruset-default .r-topBar .r-container {
+  width: 100%;
+}
+.ruset-default .r-topBar .r-getBackLink,
+.ruset-default .r-topBar .r-topWrapper,
+.ruset-default .r-topBar .r-logo,
+.ruset-default .r-topBar .r-price,
+.ruset-default .r-topBar .r-destinations,
+.ruset-default .r-topBar .r-date,
+.ruset-default .r-topBar .r-passengers {
+  display: inline-block;
+  vertical-align: top;
+  height: 36px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset-default .r-topBar .r-destinations,
+.ruset-default .r-topBar .r-date,
+.ruset-default .r-topBar .r-passengers {
+  display: none;
+}
+.ruset-default .r-topBar .r-logo:before,
+.ruset-default .r-topBar .r-price:before,
+/*.ruset-default .r-topBar .r-getBackLink:before,*/
+.ruset-default .r-topBar .r-destinations:before,
+.ruset-default .r-topBar .r-passengers:before {
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.ruset-default .r-topBar .r-getBackLink {
+  border-bottom: none;
+  width: 15%;
+  text-align: center;
+  color: #0db7ff;
+  font-size: 25px;
+  line-height: 36px;
+  cursor: pointer;
+}
+.ruset-default .r-topBar .r-getBackLink:hover {
+  background: rgba(14, 12, 32, 0.9);
+}
+.ruset-default .r-topBar .r-topWrapper {
+  width: 85%;
+  position: relative;
+}
+/*
+.ruset-default .r-topBar .r-topWrapper:hover:before,
+.ruset-default .r-topBar .r-topWrapper.r-active:before {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(14, 12, 32, 0.9);
+  cursor: pointer;
+}
+*/
+
+.ruset-default .r-topBar .r-topWrapper:hover .r-priceInner,
+.ruset-default .r-topBar .r-topWrapper.r-active .r-priceInner {
+  cursor: pointer;
+}
+.ruset-default .r-topBar .r-topWrapper:hover .r-showDetails {
+  display: block;
+}
+.ruset-default .r-topBar .r-topWrapper.r-active {
+  /*.r-priceInner {
+            .r-arrow {
+              -webkit-transform: scale(-1);
+              -moz-transform: scale(-1);
+              -ms-transform: scale(-1);
+              -o-transform: scale(-1);
+              transform: scale(-1);
+            }
+          }*/
+}
+.ruset-default .r-topBar .r-topWrapper.r-active .r-hideDetails {
+  display: block;
+}
+.ruset-default .r-topBar .r-topWrapper.r-active .r-showDetails {
+  display: none;
+}
+.ruset-default .r-topBar .r-logo {
+  width: 24%;
+  text-align: center;
+}
+.ruset-default .r-topBar .r-logo a {
+  border-bottom: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 50%;
+  width: 58px;
+  height: 28px;
+}
+.ruset-default .r-topBar .r-price {
+  float: right;
+  width: 76%;
+}
+.ruset-default .r-topBar .r-price .r-priceInner {
+  position: relative;
+  top: 6px;
+  display: inline-block;
+  width: 100%;
+  padding-right: 3%;
+  font-family: 'gotham_prolight';
+  font-size: 1.375rem;
+  text-align: right;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset-default .r-topBar .r-price .r-cur {
+  color: #0db7ff;
+  font-size: 1.125rem;
+}
+.ruset-default .r-topBar .r-hideDetails,
+.ruset-default .r-topBar .r-showDetails {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  right: 15px;
+  top: 50%;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.ruset-default .r-topBar .r-hideDetails .r-arrow {
+  margin-left: 5px;
+  -webkit-transform: scale(-1);
+  -moz-transform: scale(-1);
+  -ms-transform: scale(-1);
+  -o-transform: scale(-1);
+  transform: scale(-1);
+}
+
+
+.ruset-default .r-arrowBtn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+}
+.ruset-default .r-arrowBtn:before,
+.ruset-default .r-arrowBtn:after {
+  content: '';
+  height: 2px;
+  width: 10px;
+  background: #fff;
+  position: absolute;
+  right: -2px;
+}
+.ruset-default .r-arrowBtn:before {
+  top: -3px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset-default .r-arrowBtn:after {
+  bottom: -3px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/*768*/
+.ruset-default.ruset-768 .r-topBar {
+  height: 70px;
+}
+.ruset-default.ruset-768 .r-topBar .r-getBackLink,
+.ruset-default.ruset-768 .r-topBar .r-topWrapper,
+.ruset-default.ruset-768 .r-topBar .r-logo,
+.ruset-default.ruset-768 .r-topBar .r-price,
+.ruset-default.ruset-768 .r-topBar .r-destinations,
+.ruset-default.ruset-768 .r-topBar .r-date,
+.ruset-default.ruset-768 .r-topBar .r-passengers {
+  height: 70px;
+}
+.ruset-default.ruset-768 .r-topBar .r-getBackLink {
+  width: 7.2%;
+  font-size: 46px;
+  line-height: 70px;
+}
+.ruset-default.ruset-768 .r-topBar .r-getBackLink .r-arrowB {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.ruset-default.ruset-768 .r-topBar .r-topWrapper {
+  width: 92.8%;
+}
+.ruset-default.ruset-768 .r-topBar .r-logo,
+.ruset-default.ruset-768 .r-topBar .r-destinations {
+  position: relative;
+}
+.ruset-default.ruset-768 .r-topBar .r-logo:after,
+.ruset-default.ruset-768 .r-topBar .r-destinations:after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-left: 25px solid #221e51;
+  border-bottom: 35px solid transparent;
+}
+.ruset-default.ruset-768 .r-topBar .r-logo {
+  width: 14.6%;
+  z-index: 4;
+}
+.ruset-default.ruset-768 .r-topBar .r-logo a {
+  width: 90px;
+  height: 44px;
+}
+.ruset-default.ruset-768 .r-topBar .r-destinations {
+  display: inline-block;
+  width: 53.6%;
+  background: #1E3D74;
+  z-index: 3;
+}
+.ruset-default.ruset-768 .r-topBar .r-destinations .r-from,
+.ruset-default.ruset-768 .r-topBar .r-destinations .r-to {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 1.25rem;
+  width: 48%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ruset-default.ruset-768 .r-topBar .r-destinations .r-from {
+  text-align: right;
+  width: 38%;
+}
+.ruset-default.ruset-768 .r-topBar .r-destinations .r-arrowBtn {
+  background: #0db7ff;
+  width: 6%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.ruset-default.ruset-768 .r-topBar .r-destinations .r-arrowBtn:before,
+.ruset-default.ruset-768 .r-topBar .r-destinations .r-arrowBtn:after {
+  background: #0db7ff;
+}
+.ruset-default.ruset-768 .r-topBar .r-destinations:after {
+  border-left-color: #1e3d74;
+}
+.ruset-default.ruset-768 .r-topBar .r-price {
+  width: 28.8%;
+}
+.ruset-default.ruset-768 .r-topBar .r-price .r-priceInner {
+  top: 7px;
+  font-size: 1.8rem;
+}
+.ruset-default.ruset-768 .r-topBar .r-price .r-cur {
+  font-size: 1.563rem;
+}
+
+/*1140*/
+.ruset-default.ruset-1140 .r-topBar .r-container {
+  width: 1024px;
+  margin: 0 auto;
+}
+.ruset-default.ruset-1140 .r-topBar .r-getBackLink {
+  width: 6.6%;
+}
+.ruset-default.ruset-1140 .r-topBar .r-topWrapper {
+  width: 93.4%;
+}
+.ruset-default.ruset-1140 .r-topBar .r-date,
+.ruset-default.ruset-1140 .r-topBar .r-passengers {
+  position: relative;
+}
+.ruset-default.ruset-1140 .r-topBar .r-date:after,
+.ruset-default.ruset-1140 .r-topBar .r-passengers:after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-left: 25px solid #221e51;
+  border-bottom: 35px solid transparent;
+}
+.ruset-default.ruset-1140 .r-topBar .r-logo {
+  width: 13.7%;
+}
+.ruset-default.ruset-1140 .r-topBar .r-destinations {
+  width: 40.3%;
+  padding-left: 2.2%;
+  background: #1e3d74;
+}
+.ruset-default.ruset-1140 .r-topBar .r-destinations .r-from,
+.ruset-default.ruset-1140 .r-topBar .r-destinations .r-to {
+  width: 50%;
+}
+.ruset-default.ruset-1140 .r-topBar .r-destinations .r-from {
+  width: 36%;
+}
+.ruset-default.ruset-1140 .r-topBar .r-date {
+  display: inline-block;
+  z-index: 2;
+  width: 13%;
+  padding-left: 3.7%;
+  padding-top: 12px;
+  background: #1b538e;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.ruset-default.ruset-1140 .r-topBar .r-date .r-day {
+  display: inline-block;
+  font-size: .6875rem;
+  color: #82d0ff;
+}
+.ruset-default.ruset-1140 .r-topBar .r-date:after {
+  border-left-color: #1b538e;
+}
+.ruset-default.ruset-1140 .r-topBar .r-passengers {
+  display: inline-block;
+  width: 8%;
+  background: #19639f;
+  padding-left: 2%;
+  font-size: 1.25rem;
+  font-family: 'gotham_prolight';
+  color: #fff;
+  text-align: center;
+}
+.ruset-default.ruset-1140 .r-topBar .r-passengers span {
+  display: inline-block;
+}
+.ruset-default.ruset-1140 .r-topBar .r-passengers .fa {
+  color: #0db7ff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.ruset-default.ruset-1140 .r-topBar .r-passengers:after {
+  border-left-color: #19639f;
+}
+.ruset-default.ruset-1140 .r-topBar .r-price {
+  width: 25%;
+  padding-left: 2.3%;
+}
+
+@media only screen and (max-device-width : 640px) {
+  .ruset-default{
+    background: red;
+  }
+}
+
+.ruset-default .notification{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+}

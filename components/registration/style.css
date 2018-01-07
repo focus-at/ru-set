@@ -1,0 +1,47 @@
+.r-pSex > input{
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+.r-switch{
+  margin-top: 6px;
+}
+input:focus + .r-switch{
+  box-shadow: 0 0 3px 0 #0078FF;
+}
+.r-switch > span{
+  font-family: 'gotham_proregular';
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: baseline;
+  border: 1px solid #c7c7c7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 40px;
+  width: 50%;
+  font-size: .875rem;
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+}
+
+input:checked + .r-switch > .r-switch__male,
+input + .r-switch > .r-switch__female{
+  border-color: transparent;
+  background: #528fcc;
+  color: #fff;
+}
+
+input:checked + .r-switch > .r-switch__female{
+  border-color: #c7c7c7;
+  background: 0;
+  color: #000;
+}
+
+
+.passengers__data{
+  text-align: center;
+}
+.passengers__group{
+  text-align: left;
+}

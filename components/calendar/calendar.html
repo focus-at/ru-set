@@ -1,0 +1,15 @@
+<h1 class="r-pageTitle" id="calendar" smooth-scroll>Укажите дату поездки</h1>
+<h3 class="r-subTitle">Глубина продажи {{::limit}} дней.</h3>
+<div class="calendar__head">
+  <span class="calendar__head__day">Пн</span>
+  <span class="calendar__head__day">Вт</span>
+  <span class="calendar__head__day">Ср</span>
+  <span class="calendar__head__day">Чт</span>
+  <span class="calendar__head__day">Пт</span>
+  <span class="calendar__head__day">Сб</span>
+  <span class="calendar__head__day">Вс</span>
+</div>
+<div class="calendar__body" ng-repeat="(d, items) in ::months">
+  <div class="calendar__month" ng-bind="::d | dateFromString: 'MMMM yyyy' | monthEnding"></div>
+  <button class="calendar__day" type="submit" ng-repeat="day in ::items track by $index" ng-class="{'calendar__day--filled': day, 'calendar__day--active': day && date == day.fulldate}" data-date="{{::day.fulldate}}" ng-bind="::day.date"></button>
+</div>

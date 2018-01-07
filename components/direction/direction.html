@@ -1,0 +1,21 @@
+<div class="title title--direction" id="direction">Маршрут поездки</div>
+<div class="direction__input__wr">
+    <input class="direction__input" placeholder="Выберите откуда" tabindex="1" ng-model="$root.direction[0]" name="departure" ng-model-options="{ updateOn: 'default blur', debounce: {default: 300, blur: 10} }" required autocomplete="off">
+    <label class="direction__label">Откуда</label>
+    <i class="validate-icon"></i>
+</div>
+<span class="direction__switcher" ng-click="$root.direction.reverse()"></span>
+<div class="direction__input__wr">
+    <input class="direction__input" placeholder="Выберите куда" tabindex="2" ng-model="$root.direction[1]" name="arrival" ng-model-options="{ updateOn: 'default blur', debounce: {default: 300, blur: 10} }"  required autocomplete="off">
+    <label class="direction__label">Куда</label>
+    <i class="validate-icon"></i>
+</div>
+<!--
+  * раскоментировать для использования списка станций вместо автокоплита
+  <div class="r-popup stations__popup">
+    <h3 class="r-subTitle" ng-show="$root.stations.title" ng-bind="$root.stations.title" ng-class="{'r-wait-loader' : $root.stations.loading}"></h3>
+    <span class="r-close"></span>
+    <div class="stations"></div>
+  </div>
+-->
+<button class="r-btn btn btn--direction ng-invalid" type="submit" tabindex="3">Продолжить</button>

@@ -1,0 +1,56 @@
+.ruset .stations__popup{
+  display: none;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .5);
+  height: auto !important;
+  max-height: inherit;
+}
+.stations{
+  overflow: hidden;
+  text-align: left;
+}
+.direction__input__wr.focused ~ .stations__popup{
+  position: absolute;
+  display: block;
+  top: 330px;
+  left: 0;
+  right: 0;
+  width: auto;
+  transform: translate(0, 0);
+  background-color: #fff;
+  z-index: 99;
+}
+.stations__popup .r-wait-loader{
+  width: auto;
+  background-position: 50% 100%;
+}
+.stations__item{
+  padding-top: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.stations__item:hover{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 720px) {
+  .direction__input__wr.focused{
+    position: fixed;
+    top: 0;/*top: 110%;*/
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+  }
+  .direction__input__wr.focused ~ .stations__popup{
+    position: fixed;
+    top: 58px;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .direction__input__wr.focused ~ .stations__popup{
+    top: 400px;
+  }
+}

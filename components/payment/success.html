@@ -1,0 +1,36 @@
+<section class="r-wrapper" ng-show="$root.app.booking">
+    <h1 class="r-pageTitle">Спасибо за покупку!</h1>
+    <h3 class="r-subTitle">Заказ {{$root.app.booking.bookingId}} выполнен. Билеты приобретены.</h3>
+    <!--<p class="r-textCenter r-showOnlyMobile" ng-repeat="item in $root.app.booking.orders[0].data.tickets"><a href="{{item.blankUrl}}">{{item.blankUrl}}</a></p>-->
+    <ul class="r-wayLinks">
+        <!--<li><a href="#"><span class="icon-print"></span>Распечатать</a></li>
+        <li><a href="#"><span class="icon-export"></span>Переслать</a></li>-->
+        <li><a href="{{$root.app.booking.orders[0].data.fullBlankUrl}}"><span class="icon-download"></span>Сохранить билет{{$root.app.booking.orders[0].data.tickets.length > 1 ? 'ы' : ''}}</a></li>
+    </ul>
+    <article class="successContainer">
+        <div class="r-sideArea">
+            <h2>Ваш билет</h2>
+            <a href="{{$root.app.booking.orders[0].data.fullBlankUrl}}">
+            <div class="r-ticket">
+                <img src="img/ticket-blank.jpg" ng-src="{{$root.app.booking.orders[0].data.fullBlankThumb}}">
+            </div>
+            <p class="r-textCenter" ng-repeat="item in $root.app.booking.orders[0].data.tickets">Сохранить</p>
+            </a>
+        </div>
+        <div class="r-mainArea">
+            <h2>Что делать дальше?</h2>
+            <ol>
+                <li><div>Распечатайте маршрутную квитанцию сейчас или позже, из письма, которое выслано на {{$root.app.booking.recipientList[0].email}}.</div></li>
+                <li><div>При посадке в автобус, предъявите их водителю или контролёру.<p><strong>Приятной поездки!</strong></p></div></li>
+            </ol>
+            <h2>Как вернуть билет?</h2>
+            <p>Вы всегда можете скачать маршрутную квитанцию, узнать статус билета и сделать возврат в сервисе <a href="http://biletnaavtobus.ru">управления заказом</a></p>
+            <!--<ol>
+                <li><div>Распечатайте эти билеты сейчас или позже, из письма, которое выслано на {{$root.app.booking.recipientList[0].email}}.</div></li>
+                <li><div>Нажмите на ссылку “Отменить билет” в самом электронном билете.</div></li>
+            </ol>-->
+            <h2>Нужен еще билет?</h2>
+            <p><a ng-click="$emit('submit', {index: 0, append: [$root.app.booking.orders[0].data.run.arrivalBusStop.id, $root.app.booking.orders[0].data.run.departureBusStop.id].join('+')})">Вам сюда</a></p>
+        </div>
+    </article>
+</section>

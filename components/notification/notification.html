@@ -1,0 +1,7 @@
+<div class="r-notification" ng-class="({error: 'r-notifAlert'})[error.type]" ng-show="error">
+    <div class="r-container">
+        <i class="r-infoIcon"></i>
+        <article class="r-content">{{error.text || 'Ошибка сервера, попробуйте позднее.'}}</article>
+        <button type="button" class="r-btn r-notification__btn" ng-click="$emit('notification')">Скрыть</button>
+    </div>
+</div>

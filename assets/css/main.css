@@ -1,0 +1,4363 @@
+body{
+  font-family: 'gotham_proregular', Arial, Helvetica, sans-serif;
+  color: #000;
+  line-height: normal;
+  font-size: 100%; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+.ruset {
+  position: relative;
+  min-width: 320px;
+  padding-top: 36px;
+  padding-bottom: 35px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Disable text selection */
+  /*-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;*/
+  /* Top bar. Always fixed on top */
+  /* Main wrapper for all containers */
+  /* Page Titles */
+  /* Sub Title */
+  /* Powered by line */
+  /* Flat input styles */
+  /* Choose direction */
+  /* Typehead styles */
+  /* Buttons style */
+  /* Close(cross) button */
+  /* Popup & overlay styles */
+  /* Choose place in popup */
+  /* Wait preloader */
+  /* Waiting screen */
+  /* Calendar. Choose date. */
+  /* Choose results section */
+  /* Results Table */
+  /* Head row of results */
+  /* Row with results */
+  /* Destination line. Results screen. Booking screen */
+  /* Notifications */
+  /* Custom radio buttons */
+  /* Custom checkbox buttons */
+  /* Error block on top of the page */
+  /* Calendar scroller. Error results page */
+  /* Styles of form elements */
+  /* Custom Radio buttons. iOs style */
+  /* Validate icons */
+  /* Tickets. Register passengers */
+  /* Tooltip */
+  /* Booking screen */
+  /* Contact Form */
+  /* Solutions screen */
+  /* Success screen */
+  /* Container with ticket image */
+  /* Passengers Amount screen */
+  /* Details screen */
+  /* Arrow with tail */
+  /* Arrows. Small down arrow */
+  /* Big left arrow */
+}
+.ruset h1,
+.ruset h2,
+.ruset h3,
+.ruset h4,
+.ruset h5,
+.ruset h6 {
+  font-weight: normal;
+  color: #000;
+  font-family: 'gotham_proregular', Arial, Helvetica, sans-serif;
+}
+.ruset h1 {
+  font-size: 1.875rem;
+}
+.ruset h2 {
+  font-size: 1.375rem;
+}
+.ruset h3 {
+  font-size: 1.125rem;
+}
+.ruset h4,
+.ruset h5 {
+  font-size: 1rem;
+}
+.ruset ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+.ruset ::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+.ruset hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.ruset audio,
+.ruset canvas,
+.ruset img,
+.ruset video {
+  vertical-align: middle;
+}
+.ruset fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.ruset textarea {
+  resize: vertical;
+}
+.ruset a {
+  color: #066aff;
+  text-decoration: none;
+  border-bottom: 1px solid #c4d4f6;
+}
+.ruset a:hover {
+  border-bottom: none;
+}
+.ruset .r-boxSizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ruset .r-wrapper {
+  width: 100%;
+}
+.ruset .r-pageTitle {
+  text-align: center;
+  font-family: 'gotham_prolight', Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.ruset .r-subTitle {
+  text-align: center;
+  font-family: 'gotham_prolight', Arial, Helvetica, sans-serif;
+  color: #8d8d8d;
+  margin: 10px 15px 20px;
+}
+.ruset .r-poweredBy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 13px;
+  text-align: center;
+  color: #a7a7a7;
+  font-size: 0.625rem;
+}
+.ruset .r-flatInputContainer {
+  width: 100%;
+  position: relative;
+}
+.ruset .r-flatInputContainer input {
+  width: 100%;
+  display: block;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #cbcbcb;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.875rem;
+  padding: 11px 0 10px;
+  text-indent: 0;
+  color: #000;
+  outline: none;
+  text-overflow: ellipsis;
+}
+.ruset .r-flatInputContainer input::-webkit-input-placeholder {
+  font-family: 'gotham_prolight', Arial, Helvetica, sans-serif;
+  text-overflow: ellipsis;
+  color: #cbcbcb;
+}
+.ruset .r-flatInputContainer input::-moz-placeholder {
+  font-family: 'gotham_prolight', Arial, Helvetica, sans-serif;
+  text-overflow: ellipsis;
+  color: #cbcbcb;
+}
+.ruset .r-flatInputContainer input:-moz-placeholder {
+  font-family: 'gotham_prolight', Arial, Helvetica, sans-serif;
+  text-overflow: ellipsis;
+  color: #cbcbcb;
+}
+.ruset .r-flatInputContainer input:-ms-input-placeholder {
+  font-family: 'gotham_prolight', Arial, Helvetica, sans-serif;
+  text-overflow: ellipsis;
+  color: #cbcbcb;
+}
+.ruset .r-flatInputContainer input.r-errorValue {
+  border-bottom-color: #f00 !important;
+}
+.ruset .r-flatInputContainer input:hover {
+  border-bottom-color: #969696;
+}
+.ruset .r-flatInputContainer input:hover::-webkit-input-placeholder {
+  color: #969696;
+}
+.ruset .r-flatInputContainer input:hover::-moz-placeholder {
+  color: #969696;
+}
+.ruset .r-flatInputContainer input:hover:-moz-placeholder {
+  color: #969696;
+}
+.ruset .r-flatInputContainer input:hover:-ms-input-placeholder {
+  color: #969696;
+}
+.ruset .r-flatInputContainer input:focus,
+.ruset .r-flatInputContainer input:active {
+  border-bottom-color: #569aff;
+}
+.ruset .r-flatInputContainer .r-hiddenLabel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  font-size: 0.875rem;
+  color: #0078ff;
+  display: block;
+  font-family: 'gotham_promedium', Arial, Helvetica, sans-serif;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+.ruset .r-flatInputContainer.r-showLabel .r-hiddenLabel {
+  top: -16px;
+  opacity: 1;
+}
+.ruset .r-flatInputContainer .r-loaderIcon,
+.ruset .r-flatInputContainer .r-checkedIcon,
+.ruset .r-flatInputContainer .r-errorIcon,
+.ruset .r-flatInputContainer .r-clearIcon {
+  position: absolute;
+  right: 0;
+  bottom: 13px;
+}
+.ruset .r-direction .r-pageTitle {
+  margin: 33px 0;
+}
+.ruset .r-direction .r-container {
+  margin: 0 20px;
+}
+.ruset .r-direction .r-switcher {
+  border: 0;
+  background: url("../img/switch.png") no-repeat 0 0;
+  background-size: 34px 41px;
+  width: 34px;
+  height: 41px;
+  display: block;
+  margin: 31px auto;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+.ruset .r-direction .r-switcher:hover {
+  opacity: .6;
+}
+.ruset .r-direction .r-switcher:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 1px 4px #96c0e6;
+  -moz-box-shadow: 0 0 1px 4px #96c0e6;
+  box-shadow: 0 0 1px 4px #96c0e6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.ruset .r-direction .r-btn {
+  display: block;
+  width: 240px;
+  margin: 62px auto 0;
+}
+.ruset .r-btn {
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.125rem;
+  color: #fff;
+  background: #44b72d;
+  cursor: pointer;
+  padding: 17px 10px;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+.ruset .r-btn:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 1px 4px #96c0e6;
+  -moz-box-shadow: 0 0 1px 4px #96c0e6;
+  box-shadow: 0 0 1px 4px #96c0e6;
+}
+.ruset .r-btn:hover {
+  background: #4bc832;
+}
+.ruset .r-btn:active {
+  background: #44b72d;
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.ruset .r-btn.r-btn-choose {
+  background: #fff;
+  border: 1px solid #004eff;
+  color: #004eff;
+  font-size: 1rem;
+}
+.ruset .r-btn.r-btn-choose:focus {
+  outline: none;
+  background: #fff;
+}
+.ruset .r-btn.r-btn-choose:hover {
+  background: #edf3ff;
+}
+.ruset .r-btn.r-btn-choose:active {
+  background: #edf3ff;
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.ruset .r-btn.r-btnReserve {
+  width: 306px;
+  display: block;
+  margin: 20px auto;
+}
+.ruset .r-close {
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.ruset .r-close:before,
+.ruset .r-close:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  left: 7px;
+  right: 7px;
+  background: #b2b2b2;
+}
+.ruset .r-close:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset .r-close:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-close:hover {
+  opacity: .6;
+}
+.ruset .r-overlay {
+  background: rgba(7, 120, 235, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9000;
+}
+.ruset .r-popup {
+  position: absolute;
+  background: #fff;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  top: 50%;
+  max-height: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 35px 5px;
+  min-height: 355px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-popup .r-close {
+  right: 12px;
+  top: 12px;
+}
+.ruset .r-popup .r-popupTitle {
+  font-size: 1.25rem;
+  line-height: 1.4324;
+  text-align: center;
+  margin-bottom: 34px;
+  font-family: 'gotham_prolight';
+}
+.ruset .r-popup .r-btn-choose {
+  display: block;
+  width: 100%;
+  margin-top: 27px;
+}
+.ruset .r-popup.r-placePopup {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: auto;
+  min-height: 240px;
+  margin-left: -50%px;
+  padding: 10px 29px;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.ruset .r-popup.r-placePopup .r-popupTitle {
+  text-align: left;
+  font-family: 'gotham_probold';
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.ruset .r-popup.r-placePopup .r-popupTitle + p {
+  color: #a3a3a3;
+  text-align: justify;
+  font-size: .75rem;
+}
+.ruset .r-popup.r-placePopup .r-radioRound {
+  width: 90%;
+  margin: 7px 0;
+}
+.ruset .r-popup.r-placePopup .r-radioRound label,
+.ruset .r-popup.r-placePopup .r-radioRound span {
+  padding-left: 40px;
+}
+.ruset .r-placesContainer {
+  display: block;
+  margin: 23px 0 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  width: 104%;
+}
+.ruset .r-placesContainer li {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px 10px 0;
+}
+.ruset .r-placesContainer li span {
+  border: 1px solid #c7c7c7;
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: .875rem;
+  text-align: center;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.ruset .r-placesContainer li span:hover {
+  border-color: #ffb400;
+  border-width: 2px;
+  line-height: 38px;
+}
+.ruset .r-placesContainer li span.r-disable {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #c2c2c2;
+  pointer-events: none;
+}
+.ruset .r-placesContainer li span.r-active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #22ba1e;
+  background: #22ba1e;
+  color: #fff;
+}
+.ruset .r-wait-loader {
+  background: url("../img/wait-128.gif") no-repeat 0 0;
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+.ruset .r-wait .r-pageTitle {
+  font-size: 1.25rem;
+}
+.ruset .r-wait-loader {
+  margin: 15px auto 35px;
+}
+.ruset .r-wait h3 {
+  font-family: 'gotham_promedium';
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 22px 0;
+}
+.ruset .r-wait .r-foundResults {
+  text-align: center;
+  font-size: 0;
+}
+.ruset .r-wait .r-foundResults > span {
+  display: inline-block;
+  background: url("../img/bus-icon.png") no-repeat 0 0;
+  background-size: cover;
+  width: 41px;
+  height: 23px;
+  margin: 0 10px;
+}
+.ruset .r-calendarDate {
+  width: 100%;
+  font-size: 0;
+  margin-bottom: 48px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-calendarDate .r-container {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-calendarDate .r-calendarHead {
+  padding: 0 3px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  background: #f3f6f8;
+}
+.ruset .r-calendarDate .r-calendarHead li {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 9px 3px;
+  width: 14.2857143%;
+  font-family: gotham_prolight;
+  font-weight: normal;
+  font-size: .875rem;
+  line-height: normal;
+  color: #5e5e5e;
+  text-align: center;
+}
+.ruset .r-calendarDate .r-month {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 12px 0;
+  color: #0d57ff;
+}
+.ruset .r-calendarDate .r-row {
+  padding: 0 3px;
+}
+.ruset .r-calendarDate .r-row li {
+  display: inline-block;
+  vertical-align: top;
+  width: 14.2857143%;
+  padding: 5px 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-calendarDate .r-row li span,
+.ruset .r-calendarDate .r-row li a {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 14px 0;
+  border: 1px solid #d6d6d6;
+  font-size: 1.125rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.07);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.07);
+}
+.ruset .r-calendarDate .r-row li span:hover,
+.ruset .r-calendarDate .r-row li a:hover {
+  -webkit-box-shadow: inset 0 0 0 1px #d6d6d6, -1px 1px 1px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: inset 0 0 0 1px #d6d6d6, -1px 1px 1px rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0 0 0 1px #d6d6d6, -1px 1px 1px rgba(0, 0, 0, 0.07);
+}
+.ruset .r-calendarDate .r-row li.r-weekDay {
+  color: #ff0000;
+}
+.ruset .r-calendarDate .r-row li.r-today span,
+.ruset .r-calendarDate .r-row li.r-today a {
+  position: relative;
+}
+.ruset .r-calendarDate .r-row li.r-today span:before,
+.ruset .r-calendarDate .r-row li.r-today a:before {
+  content: 'Сегодня';
+  font-family: 'gotham_promedium';
+  font-size: 0.45rem;
+  color: #7498bc;
+  position: absolute;
+  top: 2.5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.ruset .r-calendarDate .r-row li.r-active {
+  position: relative;
+}
+.ruset .r-calendarDate .r-row li.r-active:before {
+  content: '';
+  position: absolute;
+  right: 6px;
+  top: 8px;
+  width: 13px;
+  height: 13px;
+  background: #22ba1e;
+}
+.ruset .r-calendarDate .r-row li.r-active span,
+.ruset .r-calendarDate .r-row li.r-active a {
+  border-color: #22ba1e;
+  color: #22ba1e;
+  -webkit-box-shadow: inset 0 0 0 2px #22ba1e;
+  -moz-box-shadow: inset 0 0 0 2px #22ba1e;
+  box-shadow: inset 0 0 0 2px #22ba1e;
+}
+.ruset .r-calendarDate .r-row li.r-active span:before,
+.ruset .r-calendarDate .r-row li.r-active a:before {
+  content: '';
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  width: 1px;
+  height: 4px;
+  background: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-calendarDate .r-row li.r-active span:after,
+.ruset .r-calendarDate .r-row li.r-active a:after {
+  content: '';
+  position: absolute;
+  right: 9px;
+  top: 10px;
+  width: 1px;
+  height: 8px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset .r-chooseResults {
+  margin-bottom: 30px;
+}
+.ruset .r-resultsHead {
+  background: #f3f6f8;
+  border: 1px solid #ebebeb;
+  font-size: 0;
+  list-style: none;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-resultsHead:before {
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.ruset .r-resultsHead li {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'gotham_prolight';
+  font-size: .6875rem;
+  color: #5e5e5e;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1.5%;
+}
+
+.ruset .r-resultsHead li.r-asc,
+.ruset .r-resultsHead li.r-desc {
+  font-family: 'gotham_promedium';
+  color: #2867f6;
+}
+.ruset .r-resultsHead li.r-asc span,
+.ruset .r-resultsHead li.r-desc span {
+  position: relative;
+}
+.ruset .r-resultsHead li.r-asc span:before,
+.ruset .r-resultsHead li.r-desc span:before {
+  content: '‹';
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  margin-left: 5px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.ruset .r-resultsHead li.r-desc span:before {
+  margin-left: 2px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.ruset .r-resultsHead li.r-cellRoad,
+.ruset .r-resultsHead li.r-cellTrip,
+.ruset .r-resultsHead li.r-cellSeats {
+  display: none;
+}
+.ruset .r-resultsHead li.r-cellStart {
+  width: 32%;
+}
+.ruset .r-resultsHead li.r-cellFinish {
+  width: 31%;
+}
+.ruset .r-resultsHead .sortable-head:hover {
+  color: #2867f6;
+  cursor: pointer;
+}
+
+.ruset .r-resultsRow {
+  cursor: pointer;
+  font-size: 0;
+  overflow: hidden;
+  height: 67px;
+  border-bottom: 1px solid #d6d6d6;
+  /*-webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  */
+  /* Button to buy tickets. Initialization */
+  /* Container with detailed information and maps */
+  /* Show shadow when long text*/
+  /* Active row when click on it */
+  /* Disable row */
+  /* Hover state of row */
+}
+.ruset .r-resultsRow .r-visibleRow {
+  cursor: pointer;
+  display: block;
+}
+.ruset .r-resultsRow .r-cell {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1.5%;
+}
+.ruset .r-resultsRow .r-cell.r-cellTrip,
+.ruset .r-resultsRow .r-cell.r-cellSeats {
+  display: none;
+}
+.ruset .r-resultsRow .r-cell.r-cellStart,
+.ruset .r-resultsRow .r-cell.r-cellFinish {
+  font-family: 'gotham_prolight';
+  font-size: 1.25rem;
+  width: 30.25%;
+  padding-top: 3px;
+}
+.ruset .r-resultsRow .r-cell.r-cellStart .r-destination,
+.ruset .r-resultsRow .r-cell.r-cellFinish .r-destination {
+  font-family: 'gotham_proregular';
+  font-size: .625rem;
+  margin-top: -2.5px;
+}
+.ruset .r-resultsRow .r-cell.r-cellStart .r-destination span,
+.ruset .r-resultsRow .r-cell.r-cellFinish .r-destination span {
+  display: none;
+}
+.ruset .r-resultsRow .r-cell.r-cellStart .r-anotherDayDestination,
+.ruset .r-resultsRow .r-cell.r-cellFinish .r-anotherDayDestination {
+  display: inline-block;
+  vertical-align: baseline;
+  background: #ffde00;
+  color: #000;
+  font-size: .5rem;
+  font-family: 'gotham_promedium';
+  padding: 1px 3px;
+  margin-left: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ruset .r-resultsRow .r-cell.r-cellRoad {
+  text-align: center;
+  width: 8%;
+  margin-left: -6%;
+}
+.ruset .r-resultsRow .r-cell.r-cellRoad .r-time {
+  font-size: .75rem;
+  white-space: nowrap;
+  display: none;
+}
+.ruset .r-resultsRow .r-cell.r-cellPrice {
+  width: 37.5%;
+  padding-top: 3px;
+  padding-right: 1.5%;
+}
+.ruset .r-resultsRow .r-cell.r-cellPrice .r-advancedSeats {
+  text-align: center;
+  font-size: .625rem;
+  margin-top: 3px;
+}
+.ruset .r-resultsRow .r-cell.r-cellPrice .r-advancedSeats.r-last {
+  color: #f00;
+}
+.runs__buy{
+  outline: 0
+}
+.ruset .r-resultsRow .r-buyBtn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #c2c5dc;
+  background: #fff;
+  text-align: center;
+  width: 100%;
+  height: 45px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.ruset .r-resultsRow .r-buyBtn .r-cur {
+  font-size: .75rem;
+}
+.ruset .r-resultsRow .r-buyBtn:before {
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.ruset .r-resultsRow .r-buyBtn:after {
+  content: 'Купить поездку';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  right: 0;
+  font-size: .625rem;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s 0.1s;
+  -moz-transition: all 0.5s 0.1s;
+  -ms-transition: all 0.5s 0.1s;
+  -o-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+}
+.ruset .r-resultsRow .r-buyBtn.r-quickest:before,
+.ruset .r-resultsRow .r-buyBtn.r-bestPrice:before,
+.ruset .r-resultsRow .r-buyBtn.r-optimal:before {
+  height: 130%;
+}
+.ruset .r-resultsRow .r-buyBtn.r-quickest:after,
+.ruset .r-resultsRow .r-buyBtn.r-bestPrice:after,
+.ruset .r-resultsRow .r-buyBtn.r-optimal:after {
+  opacity: 1;
+  top: 3px;
+}
+.ruset .r-resultsRow .r-buyBtn.r-quickest {
+  border-color: #ff9f4a;
+}
+.ruset .r-resultsRow .r-buyBtn.r-quickest:after {
+  content: 'Самый быстрый';
+  color: #ff9f4a;
+}
+.ruset .r-resultsRow .r-buyBtn.r-bestPrice {
+  border-color: #38c321;
+}
+.ruset .r-resultsRow .r-buyBtn.r-bestPrice:after {
+  content: 'Лучшая цена';
+  color: #38c321;
+}
+.ruset .r-resultsRow .r-buyBtn.r-optimal {
+  border-color: #ff4a7d;
+}
+.ruset .r-resultsRow .r-buyBtn.r-optimal:after {
+  content: 'Оптимальный';
+  color: #ff4a7d;
+}
+.ruset .r-resultsRow .r-buyBtn.r-disable {
+  cursor: default;
+  pointer-events: none;
+  border-color: #ccc;
+  color: rgba(0, 0, 0, 0.35);
+}
+.ruset .r-resultsRow .r-buyBtn.r-disable:after {
+  color: rgba(0, 0, 0, 0.35);
+}
+.ruset .r-resultsRow:hover .r-buyBtn {
+  border: none;
+  background: #0080ff !important;
+  -webkit-box-shadow: inset 0 -2px 0 0 #004d99 !important;
+  -moz-box-shadow: inset 0 -2px 0 0 #004d99 !important;
+  box-shadow: inset 0 -2px 0 0 #004d99 !important;
+  color: #fff;
+}
+.ruset .r-resultsRow:hover .r-buyBtn:before {
+  height: 130%;
+}
+.ruset .r-resultsRow:hover .r-buyBtn:after {
+  color: #fff;
+  opacity: 1;
+  top: 3px;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-quickest,
+.ruset .r-resultsRow:hover .r-buyBtn.r-bestPrice,
+.ruset .r-resultsRow:hover .r-buyBtn.r-optimal {
+  color: #fff;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-quickest:after,
+.ruset .r-resultsRow:hover .r-buyBtn.r-bestPrice:after,
+.ruset .r-resultsRow:hover .r-buyBtn.r-optimal:after {
+  content: 'Купить поездку';
+  color: #fff;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-quickest {
+  background: #ff9f4a !important;
+  -webkit-box-shadow: inset 0 -2px 0 0 #e36b00 !important;
+  -moz-box-shadow: inset 0 -2px 0 0 #e36b00 !important;
+  box-shadow: inset 0 -2px 0 0 #e36b00 !important;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-bestPrice {
+  background: #38c321 !important;
+  -webkit-box-shadow: inset 0 -2px 0 0 #1f6c12 !important;
+  -moz-box-shadow: inset 0 -2px 0 0 #1f6c12 !important;
+  box-shadow: inset 0 -2px 0 0 #1f6c12 !important;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-optimal {
+  background: #ff4a7d !important;
+  -webkit-box-shadow: inset 0 -2px 0 0 #e30040 !important;
+  -moz-box-shadow: inset 0 -2px 0 0 #e30040 !important;
+  box-shadow: inset 0 -2px 0 0 #e30040 !important;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-disable {
+  border: 1px solid #ccc;
+  background: #fff !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.35);
+}
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable:before {
+  height: 100%;
+}
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable:after {
+  color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+}
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-quickest:before,
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-bestPrice:before,
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-optimal:before {
+  height: 130%;
+}
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-quickest:after,
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-bestPrice:after,
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-optimal:after {
+  opacity: 1;
+}
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-quickest:after {
+  content: 'Самый быстрый';
+}
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-bestPrice:after {
+  content: 'Лучшая цена';
+}
+.ruset .r-resultsRow .r-buyBtn:hover.r-disable.r-optimal:after {
+  content: 'Оптимальный';
+}
+.ruset .r-resultsRow .r-hiddenWrapper {
+  margin-top: 15px;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details {
+  cursor: default;
+  background: #ebf0f3;
+  margin-top: 10px;
+  padding: 13px 1.5%;
+  position: relative;
+  z-index: 10;
+  font-size: .75rem;
+  /* Top dots */
+  /* Bottom dots */
+  /* Button to hide details */
+  /* Route of transport. Mobile version */
+  /* Route of transport. General version */
+  /* Datepicker */
+  /* Information about transport and company */
+  /* Prices and Rates */
+  /* Get back */
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details:before {
+  content: '';
+  height: 3px;
+  background: url("../img/dots.png") repeat-x 50% 0;
+  position: absolute;
+  left: 0;
+  top: -3px;
+  right: 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details:after {
+  content: '';
+  display: none;
+  height: 3px;
+  background: url("../img/dots.png") repeat-x 50% 100%;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  right: 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-closeDetails {
+  position: absolute;
+  right: 1.5%;
+  top: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-closeDetails > span {
+  display: none;
+  vertical-align: middle;
+  font-size: .75rem;
+  color: #b2b2b2;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-closeDetails .r-close {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-left: 5px;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-closeDetails .r-close:hover {
+  opacity: 1;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-closeDetails:hover {
+  opacity: .6;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details h3,
+.ruset .r-resultsRow .r-hiddenWrapper .r-details h4 {
+  font-size: .75rem;
+  font-family: 'gotham_promedium';
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details h4 {
+  color: #0078ff;
+}
+
+.ruset .r-resultsRow .r-hiddenWrapper .r-details p {
+  margin-bottom: 1.5em;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details i {
+  color: #95999b;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute {
+  margin-bottom: 10px;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute .r-stop {
+  padding-left: 16px;
+  line-height: 1.4;
+  padding-bottom: 15px;
+  position: relative;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute .r-stop:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  z-index: 2;
+  width: 5px;
+  height: 5px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #ebf0f3;
+  border: 1px solid #0eb7ff;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute .r-stop:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 4px;
+  bottom: -5px;
+  width: 3px;
+  border-right: 1px solid #0eb7ff;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute .r-stop h5 {
+  font-size: .75rem;
+  font-family: 'gotham_promedium';
+  margin: 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute .r-stop p {
+  color: #697075;
+  margin: 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute .r-stop:last-child:after {
+  display: none;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route {
+  display: none;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker {
+  visibility: hidden;
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker .datepick-highlight {
+  background: none;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker .datepick-today {
+  background: none;
+  border: none !important;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport {
+  font-size: 0;
+  margin-bottom: 30px;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-label,
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-value {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-label {
+  font-family: 'gotham_promedium';
+  margin-bottom: 5px;
+  font-size: .75rem;
+  color: #000;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-value {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-value i {
+  font-size: .875rem;
+  display: inline-block;
+  width: 100%;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates {
+  margin-bottom: 30px;
+  font-size: .875rem;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates .r-tablePrice {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates .r-tablePrice .r-th,
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates .r-tablePrice .r-td {
+  display: inline-block;
+  vertical-align: top;
+  font-size: .875rem;
+  margin: 4px 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates .r-tablePrice .r-th {
+  width: 62%;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates .r-tablePrice .r-td {
+  width: 38%;
+  text-align: right;
+  font-family: 'gotham_promedium';
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-getBack i {
+  font-size: .875rem;
+  white-space: pre-line;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-details .r-getBack p {
+  margin: .5em 0;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-map {
+  display: none;
+  background: #ebf0f3;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-map .r-clicker {
+  background: rgba(0,0,0,.35);
+  font-size: .75rem;
+  text-align: center;
+  line-height: 1.625rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-transform: uppercase;
+}
+.ruset .r-resultsRow .r-hiddenWrapper .r-map .r-clicker:before {content: 'Скрыть карту '}
+.ruset .r-resultsRow .r-hiddenWrapper .r-map .r-clicker:after {font-family: "fontello"; content: '\e808'}
+
+.ruset .r-resultsRow .r-hiddenWrapper .r-map.r-active{height: 50px;}
+.ruset .r-resultsRow .r-hiddenWrapper .r-map.r-active .r-clicker:before {content: 'Показать карту '}
+.ruset .r-resultsRow .r-hiddenWrapper .r-map.r-active .r-clicker:after {font-family: "fontello"; content: '\e809'}
+
+.ruset .r-resultsRow .r-hiddenWrapper .r-map:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 5px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.14)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+}
+.ruset .r-resultsRow.r-longText {
+  position: relative;
+}
+.ruset .r-resultsRow.r-longText:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  height: 18px;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.23) 25%, rgba(255, 255, 255, 0.77) 75%, rgba(255, 255, 255, 0.97) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.03)), color-stop(25%, rgba(255, 255, 255, 0.23)), color-stop(75%, rgba(255, 255, 255, 0.77)), color-stop(100%, rgba(255, 255, 255, 0.97)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.23) 25%, rgba(255, 255, 255, 0.77) 75%, rgba(255, 255, 255, 0.97) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.23) 25%, rgba(255, 255, 255, 0.77) 75%, rgba(255, 255, 255, 0.97) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.23) 25%, rgba(255, 255, 255, 0.77) 75%, rgba(255, 255, 255, 0.97) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.23) 25%, rgba(255, 255, 255, 0.77) 75%, rgba(255, 255, 255, 0.97) 100%);
+}
+
+.ruset .r-resultsRow.r-selected{
+  background: #0080ff !important;
+  height: 100%;
+}
+
+.ruset .r-resultsRow.r-selected:before{
+  display: none;
+}
+.ruset .r-resultsRow.r-selected .r-cell {
+  color: #fff;
+}
+.ruset .r-resultsRow.r-selected .r-hiddenWrapper{
+  height: 0;
+  overflow: hidden;
+}
+
+.ruset .r-resultsRow.r-active {
+  background: #0080ff;
+  height: 100%;
+  /* Button to buy tickets. State when is active */
+  /* Container with detailed information and maps */
+  /* Show shadow when long text*/
+}
+.ruset .r-resultsRow.r-active .r-hiddenWrapper{
+  height: auto;
+}
+
+.ruset .r-resultsRow.r-active .r-cell {
+  color: #fff;
+}
+.ruset .r-resultsRow.r-active .r-cell.r-cellStart,
+.ruset .r-resultsRow.r-active .r-cell.r-cellFinish {
+  font-family: 'gotham_promedium';
+}
+.ruset .r-resultsRow.r-active .r-cell.r-cellRoad .r-line,
+.ruset .r-resultsRow.r-selected .r-cell.r-cellRoad .r-line {
+  border-color: #fff;
+}
+.ruset .r-resultsRow.r-active .r-cell.r-cellRoad .r-line:before,
+.ruset .r-resultsRow.r-active .r-cell.r-cellRoad .r-line:after,
+.ruset .r-resultsRow.r-selected .r-cell.r-cellRoad .r-line:before,
+.ruset .r-resultsRow.r-selected .r-cell.r-cellRoad .r-line:after{
+  border-color: #fff;
+}
+.ruset .r-resultsRow.r-active .r-buyBtn {
+  border-color: #fff;
+  background: #0080ff;
+  box-shadow: none;
+  color: #fff;
+}
+.ruset .r-resultsRow.r-active .r-buyBtn.r-quickest,
+.ruset .r-resultsRow.r-active .r-buyBtn.r-bestPrice,
+.ruset .r-resultsRow.r-active .r-buyBtn.r-optimal {
+  color: #fff;
+  border-color: #fff;
+}
+.ruset .r-resultsRow.r-active .r-buyBtn.r-quickest:after,
+.ruset .r-resultsRow.r-active .r-buyBtn.r-bestPrice:after,
+.ruset .r-resultsRow.r-active .r-buyBtn.r-optimal:after {
+  color: #fff;
+}
+.ruset .r-resultsRow.r-active .r-buyBtn.r-quickest {
+  background: #ff9f4a;
+}
+.ruset .r-resultsRow.r-active .r-buyBtn.r-bestPrice {
+  background: #38c321;
+}
+.ruset .r-resultsRow.r-active .r-buyBtn.r-optimal {
+  background: #ff4a7d;
+}
+.ruset .r-resultsRow.r-active .r-hiddenWrapper {
+  display: block;
+}
+.ruset .r-resultsRow.r-active.r-longText:before {
+  display: none;
+}
+.ruset .r-resultsRow.r-disable {
+  pointer-events: none;
+}
+.ruset .r-resultsRow.r-disable .r-cell {
+  color: rgba(0, 0, 0, 0.3);
+}
+.ruset .r-resultsRow.r-disable .r-cell.r-cellRoad .r-line {
+  background: rgba(0, 0, 0, 0.3);
+}
+.ruset .r-resultsRow.r-disable .r-cell.r-cellRoad .r-line:before,
+.ruset .r-resultsRow.r-disable .r-cell.r-cellRoad .r-line:after {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.ruset .r-resultsRow.r-disable .r-cell.r-cellFinish .r-anotherDayDestination {
+  color: rgba(0, 0, 0, 0.3);
+}
+.ruset .r-resultsRow.r-disable .r-cell.r-cellPrice .r-advancedSeats {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+.ruset .r-resultsRow.r-disable .r-cell .r-buyBtn {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.ruset .r-resultsRow.r-disable .r-cell .r-buyBtn:after {
+  color: rgba(0, 0, 0, 0.3);
+}
+.ruset .r-resultsRow:hover {
+  background: #ebf0f3;
+  /* Button to buy tickets. Hover state */
+  /* Show shadow when long text*/
+  /* Active row when click on it */
+}
+/*
+.ruset .r-resultsRow:hover .r-buyBtn {
+  background: #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #c2c5dc;
+  -moz-box-shadow: inset 0 0 0 1px #c2c5dc;
+  box-shadow: inset 0 0 0 1px #c2c5dc;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-quickest {
+  -webkit-box-shadow: inset 0 0 0 1px #38c321;
+  -moz-box-shadow: inset 0 0 0 1px #38c321;
+  box-shadow: inset 0 0 0 1px #38c321;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-bestPrice {
+  -webkit-box-shadow: inset 0 0 0 1px #ff9f4a;
+  -moz-box-shadow: inset 0 0 0 1px #ff9f4a;
+  box-shadow: inset 0 0 0 1px #ff9f4a;
+}
+.ruset .r-resultsRow:hover .r-buyBtn.r-optimal {
+  -webkit-box-shadow: inset 0 0 0 1px #ff4a7d;
+  -moz-box-shadow: inset 0 0 0 1px #ff4a7d;
+  box-shadow: inset 0 0 0 1px #ff4a7d;
+}
+*/
+.ruset .r-resultsRow:hover.r-longText:before {
+  background: -moz-linear-gradient(top, rgba(254, 255, 255, 0.03) 0%, rgba(250, 251, 252, 0.23) 25%, rgba(241, 244, 246, 0.77) 75%, rgba(236, 240, 243, 0.97) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(254, 255, 255, 0.03)), color-stop(25%, rgba(250, 251, 252, 0.23)), color-stop(75%, rgba(241, 244, 246, 0.77)), color-stop(100%, rgba(236, 240, 243, 0.97)));
+  background: -webkit-linear-gradient(top, rgba(254, 255, 255, 0.03) 0%, rgba(250, 251, 252, 0.23) 25%, rgba(241, 244, 246, 0.77) 75%, rgba(236, 240, 243, 0.97) 100%);
+  background: -o-linear-gradient(top, rgba(254, 255, 255, 0.03) 0%, rgba(250, 251, 252, 0.23) 25%, rgba(241, 244, 246, 0.77) 75%, rgba(236, 240, 243, 0.97) 100%);
+  background: -ms-linear-gradient(top, rgba(254, 255, 255, 0.03) 0%, rgba(250, 251, 252, 0.23) 25%, rgba(241, 244, 246, 0.77) 75%, rgba(236, 240, 243, 0.97) 100%);
+  background: linear-gradient(to bottom, rgba(254, 255, 255, 0.03) 0%, rgba(250, 251, 252, 0.23) 25%, rgba(241, 244, 246, 0.77) 75%, rgba(236, 240, 243, 0.97) 100%);
+}
+.ruset .r-resultsRow:hover.r-active {
+  background: #0080ff;
+  /* Button to buy tickets. Active and hover state  */
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn {
+  background: #0080ff;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn.r-quickest {
+  background: #38c321;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn.r-bestPrice {
+  background: #ff9f4a;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn.r-optimal {
+  background: #ff4a7d;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover {
+  background: #fff !important;
+  -webkit-box-shadow: inset 0 -2px 0 0 #000000 !important;
+  -moz-box-shadow: inset 0 -2px 0 0 #000000 !important;
+  box-shadow: inset 0 -2px 0 0 #000000 !important;
+  color: #0080ff;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover:after {
+  color: #0080ff;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-quickest,
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-bestPrice,
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-optimal {
+  background: #fff !important;
+  -webkit-box-shadow: inset 0 -2px 0 0 #000000 !important;
+  -moz-box-shadow: inset 0 -2px 0 0 #000000 !important;
+  box-shadow: inset 0 -2px 0 0 #000000 !important;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-quickest {
+  color: #ff9f4a;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-quickest:after {
+  color: #ff9f4a;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-bestPrice {
+  color: #38c321;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-bestPrice:after {
+  color: #38c321;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-optimal {
+  color: #ff4a7d;
+}
+.ruset .r-resultsRow:hover.r-active .r-buyBtn:hover.r-optimal:after {
+  color: #ff4a7d;
+}
+.ruset .r-line {
+  border-bottom: 1px solid #0db7ff;
+  margin: 15px 0 0 6px;
+  width: calc(100% - 6px);
+  position: relative;
+}
+.ruset .r-line:before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #0db7ff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.ruset .r-line:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid #0db7ff;
+  border-bottom: 1px solid #0db7ff;
+  -webkit-transform: rotate(-45deg) translateX(-1px);
+  -moz-transform: rotate(-45deg) translateX(-1px);
+  -ms-transform: rotate(-45deg) translateX(-1px);
+  -o-transform: rotate(-45deg) translateX(-1px);
+  transform: rotate(-45deg) translateX(-1px);
+}
+
+.ruset .r-radioRound {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  width: 138px;
+}
+.ruset .r-radioRound label,
+.ruset .r-radioRound span {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  padding-left: 34px;
+  font-size: .875rem;
+  text-align: left;
+}
+.ruset .r-radioRound label:before,
+.ruset .r-radioRound span:before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border: 1px solid #c8c8c8;
+}
+.ruset .r-radioRound label:after,
+.ruset .r-radioRound span:after {
+  background: #528fcc;
+  width: 18px;
+  height: 18px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  left: 2px;
+  top: 50%;
+}
+.ruset .r-radioRound input:checked + label:before,
+.ruset .r-radioRound input:checked + span:before {
+  border-color: #528fcc;
+}
+.ruset .r-radioRound input:checked + label:after,
+.ruset .r-radioRound input:checked + span:after {
+  content: '';
+}
+.ruset .r-radioRound input:focus + label:before,
+.ruset .r-radioRound input:focus + span:before {
+  outline: none;
+  border-color: #0078FF;
+  -webkit-box-shadow: 0 0 3px 0 #0078FF;
+  -moz-box-shadow: 0 0 3px 0 #0078ff;
+  box-shadow: 0 0 3px 0 #0078FF;
+}
+.ruset .r-radioRound input:disabled + label,
+.ruset .r-radioRound input:disabled + span {
+  color: #b4b4b4;
+  cursor: default;
+}
+.ruset .r-radioRound input:disabled + label:before,
+.ruset .r-radioRound input:disabled + span:before {
+  border-color: #ccc;
+}
+.ruset .r-radioRound input:disabled:checked + label:after,
+.ruset .r-radioRound input:disabled:checked + span:after {
+  background: #b4b4b4;
+}
+.ruset .r-radioRound.r-error {
+  color: #f00;
+}
+.ruset .r-errorBlock {
+  overflow: hidden;
+  margin: 17px 7px 30px;
+}
+.ruset .r-errorBlock .r-container {
+  position: relative;
+  border: 1px solid #f49999;
+  padding: .7em 1em;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-errorBlock p {
+  text-transform: uppercase;
+  font-size: .875rem;
+  line-height: 2;
+  font-family: 'gotham_promedium';
+  letter-spacing: .15em;
+  color: #ff3737;
+  margin-top: 0;
+}
+.ruset .r-errorBlock h1 {
+  font-family: 'gotham_prolight';
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.ruset .r-scroller {
+  width: 306px;
+  margin: 0 auto 20px;
+}
+.ruset .r-scroller h4 {
+  text-align: center;
+  color: #0d57ff;
+  margin-bottom: 10px;
+}
+.ruset .r-scroller .r-sliderWrapper {
+  position: relative;
+  padding: 0 23px;
+}
+.ruset .r-scroller .r-sliderWrapper .r-sliderArrowLeft,
+.ruset .r-scroller .r-sliderWrapper .r-sliderArrowRight {
+  width: 20px;
+  height: 20px;
+  border-bottom: 1px solid #d6d6d6;
+  position: absolute;
+  top: 13px;
+  cursor: pointer;
+}
+.ruset .r-scroller .r-sliderWrapper .r-sliderArrowLeft:hover,
+.ruset .r-scroller .r-sliderWrapper .r-sliderArrowRight:hover {
+  opacity: .6;
+}
+.ruset .r-scroller .r-sliderWrapper .r-sliderArrowLeft {
+  border-left: 1px solid #d6d6d6;
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset .r-scroller .r-sliderWrapper .r-sliderArrowRight {
+  border-right: 1px solid #d6d6d6;
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider {
+  padding-bottom: 7px;
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide {
+  list-style: none;
+  display: inline-block;
+  padding: 0 2.5px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #d6d6d6;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 3.5;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div:hover {
+  -webkit-box-shadow: inset 0 0 0 1px #d6d6d6, 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 0 0 1px #d6d6d6, 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 0 1px #d6d6d6, 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div:before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  right: 0;
+  text-align: center;
+  font-family: 'gotham_promedium';
+  font-size: .875rem;
+  line-height: 1;
+  color: #7498bc;
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #eaeaea;
+  background: #f2f6f9;
+  color: #bdc0c2;
+  cursor: default;
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-active:before {
+  color: #bdc0c2;
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-sat,
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-sun {
+  color: #f00;
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-mon:before {
+  content: 'пн';
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-tue:before {
+  content: 'вт';
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-wen:before {
+  content: 'ср';
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-thu:before {
+  content: 'чт';
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-fri:before {
+  content: 'пт';
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-sat:before {
+  content: 'сб';
+}
+.ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-sun:before {
+  content: 'вс';
+}
+.ruset .r-label {
+  color: #0078ff;
+  font-size: .75rem;
+  font-family: 'gotham_promedium';
+  display: block;
+  margin-bottom: 6px;
+}
+.ruset .r-formItem {
+  display: inline-block;
+  margin-bottom: 15px;
+  border: 1px solid #c7c7c7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1rem;
+  color: #000;
+  padding: 11px 24px 11px 7px;
+  height: 40px;
+  background: #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ruset .r-formItem.r-error {
+  border-color: #ff1f1f;
+}
+.ruset .r-formItem:hover {
+  border-color: #afbfc3;
+}
+.ruset .r-formItem:focus {
+  outline: none;
+  border-color: #0078ff;
+  -webkit-box-shadow: inset 0 0 3px 0 #0078ff;
+  -moz-box-shadow: inset 0 0 3px 0 #0078ff;
+  box-shadow: inset 0 0 3px 0 #0078ff;
+}
+.ruset .r-formItem[disabled] {
+  background: #f5f8f9;
+}
+.ruset .r-formItem[readonly]:focus {
+  border-color: #c7c7c7;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.ruset .r-formItem + .r-loaderIcon,
+.ruset .r-formItem + .r-checkedIcon,
+.ruset .r-formItem + .r-errorIcon,
+.ruset .r-formItem + .r-clearIcon {
+  margin-left: -22px;
+  margin-right: 6px;
+  margin-top: -11px;
+}
+.ruset select.r-formItem {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ruset .r-switch {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.ruset .r-switch input {
+  position: absolute;
+  opacity: 0;
+}
+.ruset .r-switch input:focus + label {
+  border-color: #0078FF;
+  -webkit-box-shadow: 0 0 3px 0 #0078FF;
+  -moz-box-shadow: 0 0 3px 0 #0078ff;
+  box-shadow: 0 0 3px 0 #0078FF;
+}
+.ruset .r-switch label {
+  cursor: pointer;
+}
+.ruset .r-switch .r-cb-enable,
+.ruset .r-switch .r-cb-disable {
+  display: inline-block;
+  vertical-align: baseline;
+  border: 1px solid #c7c7c7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 40px;
+  width: 50%;
+  font-size: .875rem;
+  text-align: center;
+  line-height: 40px;
+}
+.ruset .r-switch .r-cb-enable.r-selected,
+.ruset .r-switch .r-cb-disable.r-selected {
+  border-color: #528fcc;
+  background: #528fcc;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+.ruset .r-switch .r-cb-enable:hover,
+.ruset .r-switch .r-cb-disable:hover {
+  border-color: #afbfc3;
+  position: relative;
+  z-index: 2;
+}
+.ruset .r-switch .r-cb-enable:hover.r-selected,
+.ruset .r-switch .r-cb-disable:hover.r-selected {
+  border-color: #528fcc;
+}
+.ruset .r-switch .r-cb-disable {
+  margin-left: -1px;
+}
+.ruset .r-loaderIcon,
+.ruset .r-checkedIcon,
+.ruset .r-errorIcon,
+.ruset .r-clearIcon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.ruset .r-loaderIcon {
+  background: url("../img/loading.gif") no-repeat 50% 50%;
+  background-size: 300px;
+}
+.ruset .r-checkedIcon {
+  background: #4ecf35;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.ruset .r-checkedIcon:before {
+  content: '';
+  width: 1px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  left: 6px;
+  top: 7px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-checkedIcon:after {
+  content: '';
+  width: 1px;
+  height: 8px;
+  background: #fff;
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset .r-errorIcon {
+  background: #ff3d3d;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.ruset .r-errorIcon:before {
+  content: '!';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #fff;
+  font-size: .75rem;
+  text-align: center;
+}
+.ruset .r-clearIcon {
+  background: #d7d7d7;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ruset .r-clearIcon:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 3.5px;
+  width: 1px;
+  height: 9px;
+  background: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-clearIcon:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 3.5px;
+  width: 1px;
+  height: 9px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset .r-ticketWrapper {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  margin: 0 8px 23px;
+}
+.ruset .r-ticketWrapper .r-container {
+  width: 100%;
+  font-size: 0;
+}
+.ruset .r-ticketWrapper .r-mainArea {
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Positionnig tooltip with passport's example*/
+}
+.ruset .r-ticketWrapper .r-mainArea header {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #dddddd;
+}
+.ruset .r-ticketWrapper .r-mainArea header h2 {
+  padding: 20px 0 20px 51px;
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'gotham_probold';
+  height: 59px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-ticketWrapper .r-mainArea header h2:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.ruset .r-ticketWrapper .r-mainArea header h2.r-adult:before {
+  background-image: url("../img/ico1@2x.png");
+}
+.ruset .r-ticketWrapper .r-mainArea header h2.r-child:before {
+  background-image: url("../img/ico2@2x.png");
+}
+.ruset .r-ticketWrapper .r-mainArea header h2.r-bagage:before {
+  background-image: url("../img/ico3@2x.png");
+}
+.ruset .r-ticketWrapper .r-mainArea .r-passForm {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.ruset .r-ticketWrapper .r-mainArea .r-pSex,
+.ruset .r-ticketWrapper .r-mainArea .r-pDateBirth {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 35%;
+}
+.ruset .r-ticketWrapper .r-mainArea .r-pDateBirth {
+  width: 60%;
+  margin-left: 5%;
+}
+.ruset .r-ticketWrapper .r-mainArea .r-pPlace {
+  width: 30%;
+}
+.ruset .r-ticketWrapper .r-mainArea .r-ticketContent {
+  font-size: .875rem;
+  margin-right: 15px;
+}
+
+.ruset .r-ticketWrapper .r-mainArea input + .r-tooltip img{
+  margin: 10px -9px -9px;
+  display: none;
+}
+.ruset input:focus ~ .r-tooltip,
+.ruset input.ng-invalid:focus ~ .r-tooltip {
+  display: block;
+  position: absolute;
+  z-index: 6;
+  text-align: center;
+  line-height: 1.3;
+}
+.ruset .r-ticketWrapper .r-sideArea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1px 0 15px 21px;
+  border-top: 1px dashed #cacaca;
+  position: relative;
+}
+.ruset .r-ticketWrapper .r-sideArea header h2 {
+  font-size: 1.125rem;
+  height: 59px;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  font-family: 'gotham_proregular';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-ticketWrapper .r-sideArea .r-oldPrice {
+  font-size: 1.125rem;
+  color: #a1a1a1;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+.ruset .r-ticketWrapper .r-sideArea .r-price {
+  font-size: 1.875rem;
+  font-family: 'gotham_probold';
+  margin-bottom: 15px;
+}
+.ruset .r-ticketWrapper .r-sideArea .r-addInfo {
+  color: #a3a3a3;
+  font-size: .625rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+.ruset .r-ticketWrapper .r-sideArea .icon-trash {
+  position: absolute;
+  right: 15px;
+  bottom: 14px;
+  cursor: pointer;
+  color: #b2b2b2;
+  font-size: 1.25rem;
+}
+.ruset .r-ticketWrapper .r-sideArea .icon-trash:hover {
+  color: #ccc;
+}
+.ruset .r-ticketWrapper .r-sideArea:before,
+.ruset .r-ticketWrapper .r-sideArea:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.ruset .r-ticketWrapper .r-sideArea:before {
+  left: -9px;
+  -webkit-box-shadow: 1px 0 0 0 #ddd;
+  -moz-box-shadow: 1px 0 0 0 #ddd;
+  box-shadow: 1px 0 0 0 #ddd;
+}
+.ruset .r-ticketWrapper .r-sideArea:after {
+  right: -9px;
+  -webkit-box-shadow: -1px 0 0 0 #dddddd;
+  -moz-box-shadow: -1px 0 0 0 #dddddd;
+  box-shadow: -1px 0 0 0 #dddddd;
+}
+
+.ruset input.ng-valid:focus ~ .r-tooltip{
+  display: none;
+}
+.ruset .r-tooltip {
+  display: none;
+  position: absolute;
+  border: 1px solid #e6db55;
+  background: #ffffe0;
+  padding: 10px;
+  margin-top: -2px;
+  font-size: .875rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+.ruset .r-tooltip:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffffe0;
+  z-index: 2;
+}
+.ruset .r-tooltip:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -11px;
+  margin-left: -11px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid #e6db55;
+  z-index: 1;
+}
+.ruset .r-booking {
+  font-size: 0;
+  /* Top notification */
+  /* Link for edit some section */
+  /* Main title */
+  /* Details screen. Information about destinations. */
+  /* Details screen. Information about date. */
+  /* Information about trip. Time in trip. Stations. Cities*/
+  /* Information about passengers */
+  /* Information about transport, transporter */
+  /* Information about price. Claculated. Additional. Final */
+  /* Information about can you back your tickets or not */
+  /* Personal contacts */
+  /* Just Note */
+}
+.ruset .r-booking .r-notif {
+  background: #ffefc0;
+  padding: 1px 2%;
+}
+.ruset .r-booking .r-notif h1 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'gotham_promedium';
+}
+.ruset .r-booking .r-notif h1 > span {
+  display: block;
+}
+.ruset .r-booking .r-notif h1 .r-timeLeft {
+  color: #ff1c1c;
+}
+.ruset .r-booking .r-notif p {
+  text-align: center;
+  font-size: .75rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+.ruset .r-booking h3 {
+  color: #0078ff;
+  font-size: .625rem;
+  text-transform: uppercase;
+  font-family: 'gotham_promedium';
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+.ruset .r-booking .r-pageTitle,
+.ruset .r-booking .r-routeInfo,
+.ruset .r-booking .r-dateInfo,
+.ruset .r-booking .r-tripInfo,
+.ruset .r-booking .r-passengersInfo,
+.ruset .r-booking .r-trafficInfo,
+.ruset .r-booking .r-priceInfo,
+.ruset .r-booking .r-getBackInfo,
+.ruset .r-booking .r-contactInfo,
+.ruset .r-booking .r-note {
+  border-top: 1px solid #d5dde2;
+  padding: 12px 2%;
+}
+.ruset .r-booking .r-routeInfo,
+.ruset .r-booking .r-tripInfo,
+.ruset .r-booking .r-dateInfo,
+.ruset .r-booking .r-passengersInfo,
+.ruset .r-booking .r-trafficInfo,
+.ruset .r-booking .r-priceInfo,
+.ruset .r-booking .r-getBackInfo,
+.ruset .r-booking .r-contactInfo {
+  position: relative;
+  font-size: 0;
+}
+
+.ruset .r-booking .r-getBackInfo h3{
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+}
+.ruset .r-booking .r-editLink {
+  color: #717f87;
+  font-size: .625rem;
+  position: absolute;
+  right: 2%;
+  top: 12px;
+  font-family: 'gotham_promedium';
+  cursor: pointer;
+}
+.ruset .r-booking .r-pageTitle {
+  text-align: left;
+  font-size: 1rem;
+  font-family: 'gotham_promedium';
+  margin: 0;
+}
+.ruset .r-booking .r-routeInfo .r-purpose {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.125rem;
+}
+.ruset .r-booking .r-routeInfo .r-wayArrow {
+  margin: 0 12px;
+  width: 10%;
+}
+.ruset .r-booking .r-dateInfo .r-data,
+.ruset .r-booking .r-dateInfo .r-month {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.125rem;
+  margin-right: 5px;
+}
+.ruset .r-booking .r-dateInfo .r-monthShort {
+  display: none;
+  font-size: 1rem;
+}
+.ruset .r-booking .r-tripInfo .r-start .r-cityStation,
+.ruset .r-booking .r-tripInfo .r-finish .r-cityStation {
+  font-size: 1.125rem;
+  margin-bottom: .5em;
+}
+
+.ruset .r-booking .r-tripInfo .r-start .r-time,
+.ruset .r-booking .r-tripInfo .r-finish .r-time {
+  font-size: .875rem;
+  font-family: 'gotham_promedium';
+  margin-bottom: .2em;
+}
+.ruset .r-booking .r-tripInfo .r-start .r-time span,
+.ruset .r-booking .r-tripInfo .r-finish .r-time span {
+  font-family: 'gotham_proregular';
+  color: #797979;
+}
+.ruset .r-booking .r-tripInfo .r-start .r-date,
+.ruset .r-booking .r-tripInfo .r-finish .r-date {
+  font-size: .75rem;
+  color: #797979;
+}
+.ruset .r-booking .r-tripInfo .r-start {
+  margin-bottom: 20px;
+}
+.ruset .r-booking .r-tripInfo .r-timeTrip {
+  margin-bottom: 20px;
+  font-size: .875rem;
+}
+.ruset .r-booking .r-tripInfo .r-timeTrip .r-line {
+  display: none;
+}
+.ruset .r-booking .r-passengersInfo {
+  padding-left: 0;
+  padding-right: 0;
+}
+.ruset .r-booking .r-passengersInfo h3 {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.ruset .r-booking .r-passengersInfo h3 + .r-pass {
+  padding-top: 0;
+}
+.ruset .r-booking .r-passengersInfo .r-pass {
+  padding: 20px 2% 0;
+}
+.ruset .r-booking .r-passengersInfo .r-pass .r-section1 {
+  font-size: 1rem;
+}
+.ruset .r-booking .r-passengersInfo .r-pass .r-section1 span {
+  display: block;
+  margin-top: 3px;
+  font-size: .875rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+.ruset .r-booking .r-passengersInfo .r-pass .r-section2 {
+  margin-top: 10px;
+  font-size: .875rem;
+}
+.ruset .r-booking .r-passengersInfo .r-pass .r-section2 span {
+  display: block;
+}
+.ruset .r-booking .r-passengersInfo .r-pass .r-section3 {
+  margin-top: 2px;
+  font-size: 1.5rem;
+  line-height: .9;
+  font-family: 'gotham_prolight';
+  text-align: right;
+}
+.ruset .r-booking .r-passengersInfo .r-pass .r-section3 span {
+  color: #828282;
+  font-size: 1.125rem;
+  text-decoration: line-through;
+  display: inline-block;
+  width: 100%;
+}
+.ruset .r-booking .r-trafficInfo h3 + .r-trf {
+  margin-top: 0;
+}
+.ruset .r-booking .r-trafficInfo .r-trf {
+  margin-top: 20px;
+}
+.ruset .r-booking .r-trafficInfo .r-trf h4 {
+  font-size: .875rem;
+  font-family: 'gotham_promedium';
+  margin: 0 0 3px 0;
+}
+.ruset .r-booking .r-trafficInfo .r-trf p {
+  margin: 0;
+  font-size: 1rem;
+}
+.ruset .r-booking .r-trafficInfo .r-trf p span {
+  display: block;
+  font-size: .875rem;
+  font-style: italic;
+  color: #797979;
+}
+.ruset .r-booking .r-priceInfo .r-priceCalculate {
+  margin-bottom: 20px;
+}
+.ruset .r-booking .r-priceInfo .r-priceCalculate > span {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.ruset .r-booking .r-priceInfo .r-priceCalculate .r-labelC {
+  font-size: 1rem;
+  font-family: 'gotham_promedium';
+  width: 34%;
+}
+.ruset .r-booking .r-priceInfo .r-priceCalculate .r-labelC span {
+  display: none;
+}
+.ruset .r-booking .r-priceInfo .r-priceCalculate .r-valueC {
+  width: 66%;
+  text-align: right;
+  font-size: 1.563rem;
+  font-family: 'gotham_prolight';
+}
+.ruset .r-booking .r-priceInfo .r-priceAdd {
+  margin: 10px 0;
+}
+.ruset .r-booking .r-priceInfo .r-priceAdd > span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: .875rem;
+}
+.ruset .r-booking .r-priceInfo .r-priceAdd .r-labelC {
+  width: 59%;
+}
+.ruset .r-booking .r-priceInfo .r-priceAdd .r-valueC {
+  width: 41%;
+  text-align: right;
+}
+.ruset .r-booking .r-priceInfo .r-priceFinal {
+  margin-top: 20px;
+}
+.ruset .r-booking .r-priceInfo .r-priceFinal > span {
+  display: inline-block;
+  vertical-align: baseline;
+  font-family: 'gotham_promedium';
+}
+.ruset .r-booking .r-priceInfo .r-priceFinal .r-labelC {
+  width: 45%;
+  font-size: 1rem;
+}
+.ruset .r-booking .r-priceInfo .r-priceFinal .r-valueC {
+  width: 55%;
+  font-size: 1.563rem;
+  text-align: right;
+}
+.ruset .r-booking .r-priceInfo .r-agreement {
+  display: inline-block;
+  margin: 15px 0;
+}
+.ruset .r-booking .r-getBackInfo p {
+  font-size: .875rem;
+  margin: 0;
+}
+.ruset .r-booking .r-getBackInfo p.r-noBack {
+  margin-top: 1em;
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  white-space: pre-line;
+}
+.ruset .r-booking .r-contactInfo div {
+  font-size: 1rem;
+  margin: 12px 0;
+}
+
+.ruset .r-booking .r-contactInfo .icon-mail,
+.ruset .r-booking .r-contactInfo .icon-mobile{
+  color: #d6d6d6;
+  vertical-align: middle;
+  margin-right: 15px;
+  font-size: 2rem;
+}
+.ruset .r-booking .r-contactInfo .icon-mobile{/**/
+  font-size: 3rem;
+}
+.ruset .r-booking .r-note {
+  font-size: .75rem;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.ruset .r-contactForm {
+  margin: 0 15px;
+  /* Flat input styles */
+}
+.ruset .r-contactForm .r-btn {
+  width: 260px;
+  display: block;
+  margin: 20px auto;
+}
+.ruset .r-contactForm .r-flatInputContainer {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.ruset .r-contactForm .r-flatInputContainer input {
+  text-align: center;
+}
+.ruset .r-contactForm .r-flatInputContainer input::-webkit-input-placeholder {
+  text-align: center;
+}
+.ruset .r-contactForm .r-flatInputContainer input::-moz-placeholder {
+  text-align: center;
+}
+.ruset .r-contactForm .r-flatInputContainer input:-moz-placeholder {
+  text-align: center;
+}
+.ruset .r-contactForm .r-flatInputContainer input:-ms-input-placeholder {
+  text-align: center;
+}
+.ruset .r-contactForm .r-flatInputContainer .r-hiddenLabel {
+  right: 0;
+  text-align: center;
+}
+.ruset .r-smallTip {
+  text-align: center;
+  color: #ff3737;
+  font-family: 'gotham_promedium';
+  margin-top: 20px;
+}
+.ruset .r-smallTip + .r-pageTitle {
+  margin-top: 10px;
+}
+.ruset .r-solutionsContainer {
+  text-align: center;
+  margin: 0 10px;
+}
+.ruset .r-solutionsContainer h2 {
+  font-size: 1rem;
+  font-family: 'gotham_promedium';
+  margin-bottom: .8em;
+}
+.ruset .r-solutionsContainer p {
+  margin: .8em 0;
+}
+.ruset .r-solutionsContainer + .r-solutionsContainer {
+  margin-top: 30px;
+}
+.ruset .r-wayLinks {
+  font-size: 0;
+  font-family: 'gotham_promedium';
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ruset .r-wayLinks li {
+  display: inline-block;
+  font-size: 1rem;
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+  text-align: center;
+}
+.ruset .r-wayLinks li:first-child {
+  border-top: 1px solid #ebebeb;
+}
+.ruset .r-wayLinks a {
+  display: inline-block;
+  /*width: 130px;*/
+  padding: 10px 0 10px 46px;
+  border-bottom: none;
+  color: #000;
+  text-align: left;
+  position: relative;
+}
+.ruset .r-wayLinks a span{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #528fcc;
+  font-size: 1.125rem;
+}
+.ruset .successContainer {
+  margin: 0 13px;
+  font-size: 0;
+}
+.ruset .successContainer h2 {
+  font-size: 1.25rem;
+  font-family: 'gotham_promedium';
+}
+.ruset .successContainer .r-mainArea {
+  display: inline-block;
+}
+.ruset .successContainer .r-sideArea {
+  display: none;
+}
+.ruset .successContainer p {
+  font-size: .875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ruset .successContainer ol {
+  font-size: 1.25rem;
+  font-family: 'gotham_promedium';
+  margin-bottom: 35px;
+}
+.ruset .successContainer ol li {
+  margin-top: 20px;
+}
+.ruset .successContainer ol li:first-child {
+  margin-top: 0;
+}
+.ruset .successContainer ol div {
+  font-size: .875rem;
+  font-family: 'gotham_proregular';
+}
+.ruset .r-ticket {
+  width: 286px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 7px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.ruset .r-amountWrapper {
+  width: 240px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ruset .r-amountWrapper .r-amountContainer {
+  margin-bottom: 26px;
+}
+.ruset .r-amountWrapper .r-amountContainer h2 {
+  font-size: .875rem;
+  font-family: 'gotham_promedium';
+  text-transform: uppercase;
+}
+.ruset .r-amountWrapper .r-amountContainer h2 span {
+  color: #a2a1a1;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter {
+  position: relative;
+  border: 1px solid #d6d6d6;
+  font-family: 'gotham_prolight';
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > div {
+  margin-right: 61px;
+  text-align: center;
+  height: 141px;
+  font-size: 7.5rem;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > div:before {
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > span {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  cursor: pointer;
+  font-size: 2.938rem;
+  text-align: center;
+  border-left: 1px solid #d6d6d6;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > span:before {
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > span:hover {
+  background-color: #f2f4f6;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > span.r-up {
+  top: 0;
+  bottom: 50%;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > span.r-down {
+  top: 50%;
+  bottom: 0;
+  border-top: 1px solid #d6d6d6;
+}
+.ruset .r-amountWrapper .r-amountContainer .r-amountCounter > span.r-disable {
+  pointer-events: none;
+  color: #ddd;
+}
+.ruset .r-amountWrapper .r-btn {
+  width: 240px;
+  margin: 0 auto;
+  display: block;
+}
+.ruset .r-detailsWrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 36px;
+  z-index: 10;
+}
+.ruset .r-detailsWrapper > header {
+  background: #fff;
+  padding: 10px 2%;
+  font-size: 0;
+}
+.ruset .r-detailsWrapper > header .r-detailsTitle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
+  margin: 0;
+  font-size: .75rem;
+  font-family: 'gotham_promedium';
+  text-transform: uppercase;
+}
+.ruset .r-detailsWrapper > header .r-detailsTitle span {
+  display: none;
+}
+.ruset .r-detailsWrapper > header .r-detailsNav {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  text-align: right;
+}
+/*TODO*/
+.ruset .r-detailsWrapper > header .r-detailsNav .fa {
+  color: #c0c0c0;
+  font-size: 1.25rem;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.ruset .r-detailsWrapper > header .r-detailsNav .fa:first-child {
+  margin-left: 0;
+}
+.ruset .r-detailsWrapper .r-booking {
+  background: #f3f6f8;
+  padding-bottom: 5px;
+}
+.ruset .r-detailsWrapper .r-booking .r-getBackInfo {
+  border-bottom: 1px solid #d5dde2;
+}
+.ruset .r-detailsWrapper .r-booking .r-btnReserve {
+  font-size: 1rem;
+  background: #2d5bb7;
+}
+.ruset .r-detailsWrapper .r-booking .r-btnReserve:hover {
+  background: #3a6cd2;
+}
+.ruset .r-detailsWrapper .r-booking .r-btnReserve .r-arrowBtn {
+  display: none;
+  margin: 0 0 0 20px;
+}
+.ruset .r-detailsWrapper .r-booking .r-hiddenHover {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: rgba(30, 61, 116, 0.85);
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+.ruset .r-detailsWrapper .r-booking .r-hiddenHover:before {
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.ruset .r-detailsWrapper .r-booking .r-hiddenHover .r-arrowBtn {
+  margin-right: 22px;
+}
+
+.ruset .r-arrowBtn.r-reverse:before,
+.ruset .r-arrowBtn.r-reverse:after {
+  right: auto;
+  left: -2px;
+}
+.ruset .r-arrowBtn.r-reverse:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-arrowBtn.r-reverse:after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset .r-wayArrow {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2px;
+  width: 20px;
+  background: #0db7ff;
+  position: relative;
+}
+.ruset .r-wayArrow:before,
+.ruset .r-wayArrow:after {
+  content: '';
+  height: 2px;
+  width: 13px;
+  background: #0db7ff;
+  position: absolute;
+  right: -2px;
+}
+.ruset .r-wayArrow:before {
+  top: -4px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ruset .r-wayArrow:after {
+  bottom: -4px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 6px;
+  position: relative;
+}
+.ruset .r-arrow:before,
+.ruset .r-arrow:after {
+  content: '';
+  width: 2px;
+  height: 7px;
+  background: #0db7ff;
+  position: absolute;
+  top: 0;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.ruset .r-arrow:before {
+  left: 2px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ruset .r-arrow:after {
+  right: 2px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 480px) {
+  .ruset {
+    /* Custom radio buttons */
+    /* Head row of results */
+    /* Row with results */
+    /* How long trip. Mobile version */
+  }
+  .ruset .r-radioRound {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .ruset .r-resultsHead li.r-cellStart,
+  .ruset .r-resultsHead li.r-cellFinish {
+    width: 24.25%;
+  }
+  .ruset .r-resultsHead li.r-cellRoad {
+    display: inline-block;
+    width: 14%;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart,
+  .ruset .r-resultsRow .r-cell.r-cellFinish {
+    width: 24.25%;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart .r-anotherDayDestination,
+  .ruset .r-resultsRow .r-cell.r-cellFinish .r-anotherDayDestination {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellRoad {
+    margin-left: 0;
+    width: 14%;
+    padding-right: 2%;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellRoad .r-time {
+    display: block;
+    margin-top: 9px;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellRoad .r-line {
+    margin-top: 6px;
+  }
+  .ruset .r-inTrip {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ruset {
+    padding-top: 70px;
+    /* Top bar. Always fixed on top */
+    /* Choose direction */
+    /* Buttons style */
+    /* Page Titles */
+    /* Popup & overlay styles */
+    /* Waiting screen */
+    /* Calendar. Choose date. */
+    /* Choose results section */
+    /* Notifications */
+    /* Results Table */
+    /* Row with results */
+    /* Custom radio buttons */
+    /* Error block on top of the page */
+    /* Calendar scroller. Error results page */
+    /* Tickets. Register passengers */
+    /* Booking screen */
+    /* Contact Form */
+    /* Solutions screen */
+    /* Success screen */
+    /* Passengers Amount screen */
+    /* Details screen */
+  }
+  .ruset h1 {
+    font-size: 3rem;
+  }
+  .ruset h2 {
+    font-size: 1.875rem;
+  }
+  .ruset h3 {
+    font-size: 1.5rem;
+  }
+  .ruset h4,
+  .ruset h5 {
+    font-size: 1.125rem;
+  }
+  .ruset .r-showOnlyMobile {
+    display: none;
+  }
+
+  .ruset .r-direction .r-pageTitle {
+    margin: 70px 0;
+  }
+  .ruset .r-direction .r-container {
+    text-align: center;
+  }
+  .ruset .r-direction .r-flatInputContainer {
+    display: inline-block;
+    vertical-align: middle;
+    width: 38.5%;
+  }
+  .ruset .r-direction .r-switcher {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 7.5%;
+  }
+  .ruset .r-direction .r-btn {
+    margin-top: 100px;
+  }
+  .ruset .r-btn.r-btn-choose {
+    font-size: 1.125rem;
+  }
+  .ruset .r-btn.r-btnReserve {
+    width: 450px;
+    margin-top: 40px;
+  }
+  .ruset .r-pageTitle {
+    margin-top: 85px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .ruset .r-subTitle {
+    margin-bottom: 50px;
+  }
+  .ruset .r-popup {
+    right: 50px;
+    left: 50px;
+    padding: 37px 12px 35px;
+  }
+  .ruset .r-popup .r-popupTitle {
+    font-size: 1.875rem;
+  }
+  .ruset .r-popup .r-btn-choose {
+    width: 456px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ruset .r-popup.r-placePopup {
+    top: 6%;
+    left: 50%;
+    width: 768px;
+    margin-left: -384px;
+  }
+  .ruset .r-wait .r-pageTitle {
+    font-size: 3rem;
+  }
+  .ruset .r-wait .r-wait-loader {
+    margin-top: 40px;
+  }
+  .ruset .r-wait h3 {
+    font-size: 1rem;
+    margin: 35px 0;
+  }
+  .ruset .r-wait .r-foundResults > span {
+    width: 52px;
+    height: 29px;
+    margin: 0 13px;
+  }
+  .ruset .r-calendarDate {
+    margin-bottom: 58px;
+  }
+  .ruset .r-calendarDate .r-calendarHead {
+    padding: 0 12px;
+  }
+  .ruset .r-calendarDate .r-calendarHead li {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .ruset .r-calendarDate .r-month {
+    font-size: 1.25rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .ruset .r-calendarDate .r-row {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .ruset .r-calendarDate .r-row li {
+    padding: 8px;
+  }
+  .ruset .r-calendarDate .r-row li span,
+  .ruset .r-calendarDate .r-row li a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 2.125rem;
+  }
+  .ruset .r-calendarDate .r-row li.r-today span:before,
+  .ruset .r-calendarDate .r-row li.r-today a:before {
+    font-size: .75rem;
+    top: 4px;
+  }
+  .ruset .r-calendarDate .r-row li.r-active:before {
+    right: 11px;
+    width: 27px;
+    height: 27px;
+  }
+  .ruset .r-calendarDate .r-row li.r-active span:before,
+  .ruset .r-calendarDate .r-row li.r-active a:before {
+    right: 28px;
+    top: 20px;
+    height: 8px;
+  }
+  .ruset .r-calendarDate .r-row li.r-active span:after,
+  .ruset .r-calendarDate .r-row li.r-active a:after {
+    right: 20px;
+    top: 13px;
+    height: 16px;
+  }
+  .ruset .r-chooseResults {
+    margin-bottom: 45px;
+  }
+
+  .ruset .r-resultsHead li {
+    font-size: .875rem;
+    width: auto;
+  }
+  .ruset .r-resultsHead li.r-asc span:before,
+  .ruset .r-resultsHead li.r-desc span:before {
+    top: -1px;
+    margin-left: 7px;
+    font-size: 1.25rem;
+  }
+  .ruset .r-resultsHead li.r-desc span:before {
+    margin-left: 4px;
+  }
+  .ruset .r-resultsHead li.r-cellStart,
+  .ruset .r-resultsHead li.r-cellFinish {
+    width: 21%;
+  }
+  .ruset .r-resultsHead li.r-cellPrice {
+    width: 24%;
+  }
+  .ruset .r-resultsHead li.r-cellRoad,
+  .ruset .r-resultsHead li.r-cellSeats {
+    display: inline-block;
+  }
+  .ruset .r-resultsHead li.r-cellTrip {
+    display: none;
+  }
+  .ruset .r-resultsRow {
+    height: 86px;
+    /* Button to buy tickets. Initialization */
+    /* Show shadow when long text*/
+    /* Container with detailed information and maps */
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart,
+  .ruset .r-resultsRow .r-cell.r-cellFinish {
+    width: 21%;
+    padding-top: 6px;
+    font-size: 2.25rem;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart .r-destination,
+  .ruset .r-resultsRow .r-cell.r-cellFinish .r-destination {
+    font-size: .75rem;
+    margin-top: 2px;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart .r-destination span,
+  .ruset .r-resultsRow .r-cell.r-cellFinish .r-destination span {
+    display: inline;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart .r-anotherDayDestination,
+  .ruset .r-resultsRow .r-cell.r-cellFinish .r-anotherDayDestination {
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellPrice {
+    width: 24%;
+    padding-right: 0;
+    padding-top: 10px;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellPrice .r-advancedSeats {
+    display: none;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellSeats {
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: .875rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 7px;
+    height: 72px;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellSeats.r-last {
+    color: #f00;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellSeats:before {
+    height: 100%;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellRoad .r-time {
+    margin-top: 14px;
+  }
+  .ruset .r-resultsRow .r-buyBtn {
+    height: 65px;
+    font-size: 1.875rem;
+  }
+  .ruset .r-resultsRow .r-buyBtn .r-cur {
+    font-size: 1.563rem;
+  }
+  .ruset .r-resultsRow .r-buyBtn:after {
+    font-size: .8125rem;
+  }
+  .ruset .r-resultsRow .r-buyBtn.r-quickest:after,
+  .ruset .r-resultsRow .r-buyBtn.r-bestPrice:after,
+  .ruset .r-resultsRow .r-buyBtn.r-optimal:after {
+    top: 6px;
+  }
+  .ruset .r-resultsRow .r-buyBtn:hover:after {
+    top: 6px;
+  }
+  .ruset .r-resultsRow.r-longText:before {
+    top: 68px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details {
+    font-size: .875rem;
+    /* Bottom dots */
+    /* Button to hide details */
+    /* Route of transport. Mobile version */
+    /* Route of transport. General version */
+    /* Datepicker */
+    /* Information about transport and company */
+    /* Prices and Rates */
+    /* Get back */
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details:after {
+    display: block;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-closeDetails > span {
+    display: inline-block;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details h3 {
+    font-size: .875rem;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-mobileRoute {
+    display: none;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route {
+    display: block;
+    margin-bottom: 30px;
+    /* Head of table */
+    /* Body of table */
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tHead {
+    padding-left: 23px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tHead table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tHead table th {
+    font-family: 'gotham_promedium';
+    font-weight: normal;
+    font-size: .75rem;
+    text-align: right;
+    text-transform: uppercase;
+    color: #0078ff;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tHead table th:first-child {
+    text-align: left;
+    position: relative;
+    left: -23px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tBody {
+    padding-left: 23px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tBody table {
+    width: 100%;
+    table-layout: fixed;
+    border-bottom: 3px solid #cbd5db;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tBody table tr td {
+    text-align: right;
+    padding: 7px 0;
+    border-bottom: 1px solid #cbd5db;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tBody table tr td:first-child {
+    text-align: left;
+    position: relative;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tBody table tr td:first-child:before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: 11px;
+    z-index: 2;
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #ebf0f3;
+    border: 1px solid #0eb7ff;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tBody table tr td:first-child:after {
+    content: '';
+    position: absolute;
+    left: -23px;
+    z-index: 1;
+    top: 17px;
+    bottom: -13px;
+    width: 3px;
+    border-right: 1px solid #0eb7ff;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route .r-tBody table tr:last-child td:first-child:after {
+    display: none;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker {
+    float: right;
+    margin-top: -5px;
+    visibility: visible;
+    position: static;
+    left: auto;
+    top: auto;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport {
+    width: 64%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-label {
+    width: 25%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-value {
+    width: 75%;
+    margin-top: -2px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates {
+    width: 35%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-getBack {
+    width: 100%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-map {
+    display: block;
+  }
+  .ruset .r-radioRound {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .ruset .r-radioRound label,
+  .ruset .r-radioRound span {
+    padding-left: 45px;
+  }
+  .ruset .r-radioRound label:before,
+  .ruset .r-radioRound span:before  {
+    content: '';
+    width: 28px;
+    height: 28px;
+  }
+  .ruset .r-radioRound label:after,
+  .ruset .r-radioRound span:after {
+    width: 22px;
+    height: 22px;
+    left: 3px;
+  }
+  .ruset .r-errorBlock {
+    margin-top: 25px;
+    width: 685px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ruset .r-errorBlock p {
+    font-size: 1rem;
+  }
+  .ruset .r-scroller {
+    width: 728px;
+    margin-bottom: 40px;
+  }
+  .ruset .r-scroller h4 {
+    margin-bottom: 20px;
+  }
+  .ruset .r-scroller .r-sliderWrapper {
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-sliderArrowLeft,
+  .ruset .r-scroller .r-sliderWrapper .r-sliderArrowRight {
+    width: 42px;
+    height: 42px;
+    border-bottom-width: 2px;
+    top: 24px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-sliderArrowLeft {
+    border-left-width: 2px;
+    left: 9px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-sliderArrowRight {
+    border-right-width: 2px;
+    right: 9px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider {
+    padding-bottom: 4px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide {
+    padding: 0 9.5px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div {
+    height: 90px;
+    font-size: 2.125rem;
+    line-height: 3;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div:before {
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-mon:before {
+    content: 'понедельник';
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-tue:before {
+    content: 'вторник';
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-wen:before {
+    content: 'среда';
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-thu:before {
+    content: 'четверг';
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-fri:before {
+    content: 'пятница';
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-sat:before {
+    content: 'суббота';
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div.r-sun:before {
+    content: 'воскресенье';
+  }
+  .ruset .r-ticketWrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    padding-left: 25px;
+    padding-right: 25px;
+    /* Tablets. Left column */
+    /* Tablets. Right Column */
+  }
+  .ruset .r-ticketWrapper .r-mainArea header {
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pFLName,
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlaceBirth,
+  .ruset .r-ticketWrapper .r-mainArea .r-pTariff,
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlace {
+    position: absolute;
+    width: 50%;
+    left: 0;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pSexDate,
+  .ruset .r-ticketWrapper .r-mainArea .r-pDocumentType,
+  .ruset .r-ticketWrapper .r-mainArea .r-pCountry,
+  .ruset .r-ticketWrapper .r-mainArea .r-pSerialDocument {
+    position: absolute;
+    width: 45%;
+    right: 0;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pFLName,
+  .ruset .r-ticketWrapper .r-mainArea .r-pSexDate {
+    top: 0;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlaceBirth,
+  .ruset .r-ticketWrapper .r-mainArea .r-pDocumentType {
+    top: 74px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pTariff,
+  .ruset .r-ticketWrapper .r-mainArea .r-pCountry {
+    top: 148px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlace,
+  .ruset .r-ticketWrapper .r-mainArea .r-pSerialDocument {
+    top: 222px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlace {
+    width: 25%;
+  }
+  .ruset .r-ticketWrapper .r-sideArea {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    padding-left: 17px;
+    border-top: 0;
+    border-left: 1px dashed #cacaca;
+    min-height: 372px;
+  }
+  .ruset .r-ticketWrapper .r-sideArea header h2 {
+    margin: 0 0 40px -17px;
+    padding-left: 17px;
+    border-bottom: 1px solid #ddd;
+  }
+  .ruset .r-ticketWrapper .r-sideArea .r-price {
+    margin-bottom: 40px;
+  }
+  .ruset .r-ticketWrapper .r-sideArea:before,
+  .ruset .r-ticketWrapper .r-sideArea:after {
+    top: auto;
+    right: auto;
+    left: -8px;
+  }
+  .ruset .r-ticketWrapper .r-sideArea:before {
+    top: -8px;
+    -webkit-box-shadow: 0 1px 0 0 #ddd;
+    -moz-box-shadow: 0 1px 0 0 #ddd;
+    box-shadow: 0 1px 0 0 #ddd;
+  }
+  .ruset .r-ticketWrapper .r-sideArea:after {
+    bottom: -8px;
+    -webkit-box-shadow: 0 -1px 0 0 #dddddd;
+    -moz-box-shadow: 0 -1px 0 0 #dddddd;
+    box-shadow: 0 -1px 0 0 #dddddd;
+  }
+  .ruset .r-ticketWrapper.r-bagageWrapper .r-sideArea {
+    min-height: 200px;
+  }
+  .ruset .r-booking {
+    /* Top notification */
+    /* Main title */
+    /* Information about trip. Time in trip. Stations. Cities*/
+    /* Information about passengers */
+    /* Group wrap container */
+    /* Information about transport, transporter */
+    /* Information about price. Claculated. Additional. Final */
+    /* Information about can you back your tickets or not */
+    /* Personal contacts */
+    /* Just Note */
+  }
+  .ruset .r-booking .r-notif h1 {
+    font-size: 1.5rem;
+    font-family: 'gotham_proregular';
+  }
+  .ruset .r-booking .r-notif p {
+    font-size: .875rem;
+  }
+  .ruset .r-booking h3 {
+    font-size: .75rem;
+    margin-bottom: 1em;
+  }
+  .ruset .r-booking .r-pageTitle {
+    font-size: 1.125rem;
+  }
+  .ruset .r-booking .r-tripInfo .r-start,
+  .ruset .r-booking .r-tripInfo .r-finish,
+  .ruset .r-booking .r-tripInfo .r-timeTrip {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 2%;
+  }
+  .ruset .r-booking .r-tripInfo .r-start,
+  .ruset .r-booking .r-tripInfo .r-finish {
+    width: 42%;
+  }
+  .ruset .r-booking .r-tripInfo .r-start .r-cityStation,
+  .ruset .r-booking .r-tripInfo .r-finish .r-cityStation {
+    font-size: 1.25rem;
+  }
+  .ruset .r-booking .r-tripInfo .r-start {
+    margin-bottom: 0;
+  }
+  .ruset .r-booking .r-tripInfo .r-timeTrip {
+    width: 16%;
+    margin-bottom: 0;
+    font-size: .875rem;
+  }
+  .ruset .r-booking .r-tripInfo .r-timeTrip .r-time,
+  .ruset .r-booking .r-tripInfo .r-timeTrip .r-line {
+    text-align: center;
+    display: inline-block;
+    width: 55%;
+  }
+  .ruset .r-booking .r-passengersInfo h3 + .r-pass {
+    border-top: none;
+    margin-top: 0;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass {
+    border-top: 1px solid #d5dde2;
+    margin-top: 12px;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section1,
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section2,
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section3 {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section1 {
+    width: 46.5%;
+    padding-right: 2%;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section1 span {
+    margin-top: 5px;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section2 {
+    width: 27.5%;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section2 span {
+    margin-bottom: 3px;
+    display: block;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section3 {
+    width: 26%;
+    font-size: 1.8rem;
+    line-height: .9;
+    margin-top: 0;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section3 span {
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }
+  .ruset .r-booking .r-groupWrapper {
+    position: relative;
+    font-size: 0;
+  }
+  .ruset .r-booking .r-groupWrapper:before {
+    content: '';
+    position: absolute;
+    left: 43.5%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #d5dde2;
+  }
+  .ruset .r-booking .r-trafficInfo {
+    display: inline-block;
+    vertical-align: top;
+    width: 43.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .ruset .r-booking .r-priceInfo {
+    display: inline-block;
+    vertical-align: top;
+    width: 56.5%;
+    padding-left: 3%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .ruset .r-booking .r-priceInfo .r-priceCalculate {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d5dde2;
+  }
+  .ruset .r-booking .r-priceInfo .r-priceFinal {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #d5dde2;
+  }
+  .ruset .r-booking .r-getBackInfo {
+    width: 43.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .ruset .r-booking .r-contactInfo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .ruset .r-booking .r-contactInfo h3 {
+    text-align: center;
+  }
+  .ruset .r-booking .r-contactInfo div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px;
+  }
+  .ruset .r-booking .r-note {
+    font-size: .875rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+  }
+  .ruset .r-booking .r-btnReserve {
+    margin-top: 20px;
+  }
+  .ruset .r-contactForm {
+    width: 516px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Flat input styles */
+  }
+  .ruset .r-contactForm .r-btn {
+    margin-top: 100px;
+    margin-bottom: 55px;
+  }
+  .ruset .r-contactForm .r-flatInputContainer {
+    margin-top: 2.7em;
+    margin-bottom: 2.7em;
+  }
+  .ruset .r-contactForm .r-flatInputContainer input {
+    font-size: 2.4rem;
+  }
+  .ruset .r-contactForm .r-flatInputContainer.r-emailInput {
+    width: auto;
+  }
+  .ruset .r-smallTip {
+    margin-top: 100px;
+  }
+  .ruset .r-smallTip + .r-pageTitle {
+    margin-bottom: 90px;
+  }
+  .ruset .r-solutionsContainer h2 {
+    line-height: 1.5;
+  }
+  .ruset .r-solutionsContainer + .r-solutionsContainer {
+    margin-top: 90px;
+  }
+  .ruset .r-wayLinks {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .ruset .r-wayLinks li {
+    display: inline-block;
+    width: auto;
+    border: none;
+    text-align: left;
+  }
+  .ruset .r-wayLinks li:nth-child(even) {
+    margin: 0 90px;
+  }
+  .ruset .r-wayLinks li a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: auto;
+  }
+  .ruset .successContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 725px;
+  }
+  .ruset .successContainer h2 {
+    font-size: 1.25rem;
+    font-family: 'gotham_promedium';
+  }
+  .ruset .successContainer .r-sideArea {
+    display: inline-block;
+    vertical-align: top;
+    width: 302px;
+    margin-right: 39px;
+  }
+  .ruset .successContainer .r-mainArea {
+    width: 384px;
+    vertical-align: top;
+  }
+  .ruset .r-amountWrapper {
+    width: 520px;
+    margin-top: 50px;
+  }
+  .ruset .r-amountWrapper .r-amountContainer {
+    width: 228px;
+    display: inline-block;
+  }
+  .ruset .r-amountWrapper .r-amountContainer .r-amountCounter > div {
+    height: 201px;
+  }
+  .ruset .r-amountWrapper .r-amountContainer + .r-amountContainer {
+    margin-left: 59px;
+  }
+  .ruset .r-detailsWrapper {
+    top: 70px;
+  }
+  .ruset .r-detailsWrapper .r-booking {
+    /* Details screen. Information about date. */
+    /* Information about trip. Time in trip. Stations. Cities*/
+    /* Information about can you back your tickets or not */
+    /* Group wrap container */
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 11.2%;
+    min-height: 136px;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-data {
+    font-size: 3.125rem;
+    font-family: 'gotham_prolight';
+    display: block;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-month {
+    display: none;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-monthShort {
+    display: block;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-editLink {
+    right: auto;
+    left: 17%;
+    top: auto;
+    bottom: 5px;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-tripInfo {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 88.8%;
+    border-left: 1px solid #d5dde2;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-getBackInfo {
+    margin-top: 0;
+    width: 100%;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-groupWrapper:before {
+    bottom: 67px;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-btnReserve {
+    width: 422px;
+    font-size: 1.125rem;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-btnReserve .r-arrowBtn {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  .ruset {
+    font-size: 16px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Top bar. Always fixed on top */
+    /* Main wrapper for all containers */
+    /* Choose direction */
+    /* Popup & overlay styles */
+    /* Waiting screen */
+    /* Calendar. Choose date. */
+    /* Results Table */
+    /* Row with results */
+    /* Notifications */
+    /* Custom radio buttons */
+    /* Calendar scroller. Error results page */
+    /* Tickets. Register passengers */
+    /* Booking screen */
+    /* Success screen */
+    /* Details screen */
+  }
+  .ruset .r-blockDesktop {
+    display: block;
+  }
+
+  .ruset .r-wrapper {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .ruset .r-direction .r-pageTitle {
+    margin: 100px 0 160px;
+  }
+  .ruset .r-direction .r-container {
+    width: 725px;
+    margin: 0 auto;
+  }
+  .ruset .r-direction .r-btn {
+    margin-top: 187px;
+  }
+  .ruset .r-popup {
+    right: auto;
+    left: 50%;
+    width: 670px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .ruset .r-wait .r-wait-loader {
+    margin-bottom: 40px;
+  }
+  .ruset .r-calendarDate .r-calendarHead li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .ruset .r-calendarDate .r-month {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .ruset .r-calendarDate .r-row {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .ruset .r-calendarDate .r-row li {
+    padding: 10px;
+  }
+  .ruset .r-calendarDate .r-row li span,
+  .ruset .r-calendarDate .r-row li a {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    font-size: 2.5rem;
+  }
+  .ruset .r-calendarDate .r-row li.r-today span:before,
+  .ruset .r-calendarDate .r-row li.r-today a:before {
+    font-size: .875rem;
+    top: 6px;
+  }
+  .ruset .r-calendarDate .r-row li.r-active:before {
+    right: 13px;
+    top: 13px;
+    width: 37px;
+    height: 37px;
+  }
+  .ruset .r-calendarDate .r-row li.r-active span:before,
+  .ruset .r-calendarDate .r-row li.r-active a:before {
+    right: 37px;
+    top: 28px;
+    height: 12px;
+    width: 2px;
+  }
+  .ruset .r-calendarDate .r-row li.r-active span:after,
+  .ruset .r-calendarDate .r-row li.r-active a:after {
+    right: 25px;
+    top: 18px;
+    height: 24px;
+    width: 2px;
+  }
+  .ruset .r-resultsHead li.r-cellStart,
+  .ruset .r-resultsHead li.r-cellFinish {
+    width: 20%;
+  }
+  .ruset .r-resultsHead li.r-cellPrice {
+    width: 20%;
+  }
+  .ruset .r-resultsHead li.r-cellRoad {
+    width: 11%;
+    margin-left: -6.5%;
+  }
+  .ruset .r-resultsHead li.r-cellTrip {
+    display: inline-block;
+    width: 20%;
+  }
+  .ruset .r-resultsHead li.r-cellSeats {
+    width: 15%;
+  }
+  .ruset .r-resultsRow {
+    /* Container with detailed information and maps */
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart,
+  .ruset .r-resultsRow .r-cell.r-cellFinish {
+    width: 20%;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellStart .r-anotherDayDestination,
+  .ruset .r-resultsRow .r-cell.r-cellFinish .r-anotherDayDestination {
+    font-size: .75rem;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellPrice {
+    width: 20%;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellRoad {
+    width: 11%;
+    margin-left: -6.5%;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellTrip {
+    display: inline-block;
+    width: 20%;
+    padding-top: 9px;
+    font-size: .875rem;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellTrip div {
+    font-size: .75rem;
+    opacity: .5;
+  }
+  .ruset .r-resultsRow .r-cell.r-cellSeats {
+    width: 15%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details {
+    /* Route of transport. General version */
+    /* Datepicker */
+    /* Information about transport and company */
+    /* Prices and Rates */
+    /* Get back */
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-route {
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 72%;
+    margin-bottom: 30px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-hiddenForDescktop {
+    display: none;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker {
+    margin-top: -2px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker .datepick-selected {
+    background: #a4cef7;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker .datepick-month-header {
+    margin-bottom: 4px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker thead th {
+    font-family: 'gotham_probold';
+    padding: 1px 0 7px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker thead th .datepick-dow-6,
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker thead th .datepick-dow-0 {
+    color: #f12323;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker tbody td {
+    padding: 3px 0;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-datePicker tbody tr:first-child td {
+    padding-top: 7px;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin-right: 5%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-transport .r-label {
+    font-size: .875rem;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-priceRates {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-details .r-getBack {
+    width: 100%;
+  }
+  .ruset .r-resultsRow .r-hiddenWrapper .r-map {
+    display: block;
+  }
+
+  .ruset .r-radioRound label,
+  .ruset .r-radioRound span {
+    font-size: 1rem;
+  }
+  .ruset .r-scroller {
+    width: 980px;
+  }
+  .ruset .r-scroller .r-sliderWrapper {
+    padding-left: 71px;
+    padding-right: 71px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-sliderArrowLeft,
+  .ruset .r-scroller .r-sliderWrapper .r-sliderArrowRight {
+    top: 38px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider {
+    padding-bottom: 3px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide {
+    padding: 0 10.5px;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div {
+    height: 122px;
+    font-size: 2.5rem;
+    line-height: 3.2;
+  }
+  .ruset .r-scroller .r-sliderWrapper .r-slider .r-swiper-slide div:before {
+    top: 10px;
+  }
+  .ruset .r-ticketWrapper {
+    margin-left: 23px;
+    margin-right: 23px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea {
+    width: 78%;
+    padding-left: 25px;
+    /* Desktop. Left column */
+    /* Desktop. Middle Column */
+    /* Desktop. Right Column */
+  }
+  .ruset .r-ticketWrapper .r-mainArea input + .r-tooltip img{
+    display: block;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-formItem-number + .r-tooltip {
+    margin-left: -57px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pFLName,
+  .ruset .r-ticketWrapper .r-mainArea .r-pDocumentType,
+  .ruset .r-ticketWrapper .r-mainArea .r-pTariff {
+    width: 45%;
+    left: 0;
+    right: auto;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pSexDate,
+  .ruset .r-ticketWrapper .r-mainArea .r-pSerialDocument,
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlace {
+    width: 29%;
+    right: auto;
+    left: 47%;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlaceBirth,
+  .ruset .r-ticketWrapper .r-mainArea .r-pCountry {
+    width: 22.5%;
+    right: 0;
+    left: auto;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pFLName,
+  .ruset .r-ticketWrapper .r-mainArea .r-pSexDate,
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlaceBirth {
+    top: 0;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pDocumentType,
+  .ruset .r-ticketWrapper .r-mainArea .r-pSerialDocument,
+  .ruset .r-ticketWrapper .r-mainArea .r-pCountry {
+    top: 74px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pTariff,
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlace {
+    top: 148px;
+  }
+  .ruset .r-ticketWrapper .r-mainArea .r-pPlace {
+    width: auto;
+  }
+  .ruset .r-ticketWrapper .r-sideArea {
+    width: 22%;
+    min-height: 297px;
+  }
+  .ruset .r-ticketWrapper .r-sideArea header h2 {
+    margin: 0 0 40px -17px;
+    padding: 20px 0 18px 17px;
+    border-bottom: 1px solid #cacaca;
+  }
+  .ruset .r-ticketWrapper .r-sideArea .r-price {
+    margin-bottom: 40px;
+  }
+  .ruset .r-ticketWrapper .r-sideArea:before,
+  .ruset .r-ticketWrapper .r-sideArea:after {
+    top: auto;
+    right: auto;
+    left: -8px;
+  }
+  .ruset .r-ticketWrapper .r-sideArea:before {
+    top: -8px;
+    -webkit-box-shadow: 0 1px 0 0 #ddd;
+    -moz-box-shadow: 0 1px 0 0 #ddd;
+    box-shadow: 0 1px 0 0 #ddd;
+  }
+  .ruset .r-ticketWrapper .r-sideArea:after {
+    bottom: -8px;
+    -webkit-box-shadow: 0 -1px 0 0 #dddddd;
+    -moz-box-shadow: 0 -1px 0 0 #dddddd;
+    box-shadow: 0 -1px 0 0 #dddddd;
+  }
+  .ruset .r-booking {
+    /* Main title */
+    /* Information about trip. Time in trip. Stations. Cities*/
+    /* Information about passengers */
+    /* Group wrap container */
+    /* Information about transport, transporter */
+    /* Information about price. Claculated. Additional. Final */
+    /* Information about can you back your tickets or not */
+  }
+  .ruset .r-booking .r-pageTitle {
+    font-size: 1.375rem;
+  }
+  .ruset .r-booking .r-tripInfo .r-start .r-cityStation,
+  .ruset .r-booking .r-tripInfo .r-finish .r-cityStation {
+    font-size: 1.5rem;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass {
+    border-top: 1px solid #d5dde2;
+    margin-top: 12px;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section1,
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section2,
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section3 {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section1 {
+    width: 43.9%;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section2 {
+    width: 34.5%;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section2 span {
+    margin-bottom: 0;
+    float: right;
+  }
+  .ruset .r-booking .r-passengersInfo .r-pass .r-section3 {
+    width: 21.6%;
+  }
+  .ruset .r-booking .r-groupWrapper:before {
+    left: 49%;
+  }
+  .ruset .r-booking .r-trafficInfo {
+    width: 49%;
+  }
+  .ruset .r-booking .r-trafficInfo .r-trf h4,
+  .ruset .r-booking .r-trafficInfo .r-trf p {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+  }
+  .ruset .r-booking .r-trafficInfo .r-trf p {
+    width: 80%;
+  }
+  .ruset .r-booking .r-priceInfo {
+    width: 51%;
+  }
+  .ruset .r-booking .r-getBackInfo {
+    width: 49%;
+    margin-top: -55px;
+    position: relative;
+    bottom: 0;
+  }
+  .ruset .successContainer {
+    width: 780px;
+  }
+  .ruset .successContainer .r-mainArea {
+    width: 439px;
+  }
+  .ruset .r-detailsWrapper {
+    width: 1024px;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-box-shadow: 1px 0 7px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 0 7px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 0 7px rgba(0, 0, 0, 0.25);
+  }
+  .ruset .r-detailsWrapper .r-booking {
+    /* Details screen. Information about date. */
+    /* Information about can you back your tickets or not */
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-data {
+    font-size: 4.375rem;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-month {
+    display: block;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-monthShort {
+    display: none;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo .r-editLink {
+    right: 5%;
+    left: auto;
+    top: 12px;
+    bottom: auto;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-getBackInfo {
+    position: static;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-trafficInfo {
+    min-height: 211px;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-editLink {
+    display: none;
+  }
+  .ruset .r-detailsWrapper .r-booking .r-routeInfo:hover .r-hiddenHover,
+  .ruset .r-detailsWrapper .r-booking .r-dateInfo:hover .r-hiddenHover,
+  .ruset .r-detailsWrapper .r-booking .r-tripInfo:hover .r-hiddenHover,
+  .ruset .r-detailsWrapper .r-booking .r-passengersInfo:hover .r-hiddenHover,
+  .ruset .r-detailsWrapper .r-booking .r-trafficInfo:hover .r-hiddenHover {
+    display: block;
+  }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ruset .r-ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+.ruset .r-ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+.ruset .r-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.ruset .r-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.ruset .r-visuallyhidden.r-focusable:active,
+.ruset .r-visuallyhidden.r-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.ruset .r-invisible {
+  visibility: hidden;
+}
+.ruset .r-clearfix:before,
+.ruset .r-clearfix:after {
+  content: " ";
+  display: table;
+}
+.ruset .r-clearfix:after {
+  clear: both;
+}
+.ruset .r-clearfix {
+  *zoom: 1;
+}
+.ruset .r-textCenter {
+  text-align: center;
+}
+.ruset .r-textRight {
+  text-align: right;
+}
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

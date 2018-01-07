@@ -1,0 +1,6 @@
+<div class="autocomplete" ng-if="autocomplete.items.length">
+  <div class="autocomplete__item" ng-repeat="item in autocomplete.items track by $index" ng-class="{'autocomplete__item--focused': item.focused, 'autocomplete__item--child': item.child}" data-index="{{::$index}}">
+    <span ng-bind-html="item.name | highlight: autocomplete.value"></span><span ng-if="item.description" ng-bind-html="', ' + item.description | highlight: autocomplete.value"></span>
+    <div class="autocomplete__geo" ng-bind-html="item.geo.join(', ') | highlight: autocomplete.value"></div>
+  </div>
+</div>

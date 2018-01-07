@@ -1,0 +1,121 @@
+.calendar{
+  max-width: 1024px;
+  margin: 0 auto !important;
+}
+
+.calendar__head{
+  text-align: justify;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  background: #f3f6f8;
+  color: #5e5e5e;
+  font-family: gotham_prolight;
+  padding: 9px 6%;
+
+  font-size: 1px; /* IE6-9 only hack */
+}
+
+.calendar__head:after{
+  content: '';
+  width: 100%;
+  display: inline-block;
+
+  zoom: 1;
+  *display: inline;
+}
+
+.calendar__head__day{
+  font-size: .875rem;
+  display: inline-block;
+
+  zoom: 1;
+  *display: inline;
+}
+
+.calendar__body{
+  padding: 0 1%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.calendar__month{
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 12px 0;
+  color: #0078ff;
+}
+
+.calendar__day{
+  float: left;
+  background: 0;
+  border: 0 !important;
+  color: #333;
+  text-align: center;
+  width: 12.2857143%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 3.4% 0;
+  font-size: 1.125rem;
+  outline: 0;
+  margin: 1%;
+  cursor: default !important;
+}
+
+.calendar__day:nth-child(7n+7),
+.calendar__day:nth-child(7n+8){
+  color: red;
+}
+
+.calendar__day--filled{
+  background: #fff;
+  cursor: pointer !important;
+  outline: 1px solid #d6d6d6;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.07);
+}
+
+.calendar__day--filled:hover{
+  outline: 2px solid #d6d6d6;
+}
+
+.calendar__day--active.calendar__day--filled{
+  position: relative;
+  color: #22ba1e;
+  outline: 2px solid #22ba1e;
+}
+
+.calendar__day--active:after{
+  content: '\e803';
+  font-family: 'fontello';
+  font-size: .6rem;
+  line-height: 17px;
+  font-weight: normal;
+  color: #fff;
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  padding: 3% 9%;
+  background: #22ba1e;
+}
+
+@media only screen and (min-width: 768px){
+  .calendar__head{
+    padding: 9px 7%;
+  }
+  .calendar__month {
+    font-size: 1.25rem;
+    padding: 26px 0;
+  }
+  .calendar__day{
+    font-size: 2.125rem;
+  }
+  .calendar__day--active:after{
+    font-size: 1rem;
+    padding: 8% 9%;
+  }
+}
+
+@media only screen and (min-width: 1140px){
+  .calendar__day{
+    font-size: 2.5rem;
+  }
+}

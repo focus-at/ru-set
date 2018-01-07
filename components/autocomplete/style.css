@@ -1,0 +1,166 @@
+/*autocomplete*/
+.autocomplete{
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 2px;
+  max-height: 250px;
+  overflow: auto;
+  border: 1px solid #569aff;
+  text-align: left;
+  font-size: .875rem;
+  background: #fff;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+input.ng-valid-required:focus ~ .autocomplete{
+  display: block;
+}
+.autocomplete__item{
+  color: #333;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.autocomplete__item--focused{
+  background: #e7eef4;
+}
+.autocomplete__item--child{
+  padding-left: 25px;
+}
+.autocomplete__geo{
+  color: #8e8e8e;
+}
+
+/*direction*/
+.direction{
+  margin: 0 auto !important;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.direction__switcher{
+  display: inline-block;
+  width: 35px;
+  height: 41px;
+  position: relative;
+  margin: 24px 7.5% 0;
+  border: 0;
+  background: url(/img/switch.png) no-repeat 0 0;
+  background-size: 34px 41px;
+  cursor: pointer;
+}
+
+.direction__switcher:hover{
+  opacity: 0.6;
+}
+
+.btn--direction{
+  display: block;
+  width: 240px;
+  margin: 62px auto 0;
+  cursor: pointer !important;
+}
+
+.direction__input__wr{
+  position: relative;
+}
+
+.direction__input{
+  width: 100%;
+  background: 0;
+  vertical-align: middle !important;
+  font-size: 1.875rem !important;
+  padding: 11px 0 10px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #cbcbcb;
+  text-overflow: ellipsis;
+  padding-right: 15px;
+  text-transform: capitalize;
+}
+
+.direction__input::placeholder{
+  font-family: 'gotham_prolight';
+  color: #cbcbcb !important;
+}
+.direction__input:hover{
+  border-color: #969696;
+}
+.direction__input:focus{
+  outline: 0;
+  border-color: #569aff;
+}
+.direction__label{
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font: 1.875rem 'gotham_promedium';
+  color: #0078ff;
+  transition: all .2s;
+}
+
+.direction__input.ng-invalid-required ~ .validate-icon{
+  display: none;
+}
+.direction__input.ng-valid-id ~ .validate-icon{
+  display: inline;
+}
+.direction__input.ng-valid-required ~ .direction__label{
+  opacity: 1;
+  top: -16px;
+  z-index: 1;
+  font-size: 0.875rem;
+}
+
+/*validation */
+.direction__input.ng-valid{
+  border-color: #44b72d;
+}
+.ng-submitted .direction__input.ng-invalid,
+.direction__input.ng-invalid-id{
+  border-color: red;
+}
+
+@keyframes spin {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(359deg);
+  }
+}
+
+.direction__input ~ .validate-icon{
+  right: 0;
+}
+.direction__input ~ .validate-icon:hover{
+  animation: none !important;
+}
+.direction__input ~ .validate-icon:hover:before{
+  content: '\e802';
+  color: #999;
+}
+
+@media only screen and (min-width: 768px){
+  .direction__input__wr{
+    display: inline-block;
+    width: 38.5%;
+  }
+  .direction__switcher{
+    top: 15px;
+  }
+  .btn--direction{
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1140px){
+  .direction{
+    max-width: 725px;
+  }
+}

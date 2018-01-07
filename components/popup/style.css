@@ -1,0 +1,19 @@
+.popup--offer{
+  height: 100%;
+}
+.popup--offer .popup__scroll{
+  height: 100%;
+  overflow: auto;
+}
+.popup--offer ol{
+ counter-reset:item;
+ line-height: 27px;
+}
+.popup--offer ol li{
+  list-style: none;
+}
+.popup--offer ol li:before{
+ content: counters(item,".") ". ";
+ counter-increment: item;
+ font-weight: bold;
+}

@@ -1,0 +1,176 @@
+.ruset .r-notification {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 8500;
+  font-size: 0;
+  text-align: center;
+  padding: 10px 8px 20px;
+  background: #ffde24;
+}
+.ruset .r-notification .r-container {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ruset .r-notification .r-content {
+  display: inline-block;
+  width: 100%;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+.ruset .r-notification .r-btn {
+  background: none transparent;
+  border: 2px solid #000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #000;
+  font-size: 1rem;
+  margin-top: 20px;
+  min-width: 130px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.ruset .r-notification .r-btn:hover {
+  background: #000;
+  color: #fff;
+}
+.ruset .r-notification .r-infoIcon,
+.ruset .r-notification .r-close {
+  display: none;
+}
+.ruset .r-notification.r-notifAlert {
+  background: #e10c0c;
+  color: #fff;
+}
+.ruset .r-notification.r-notifAlert .r-btn {
+  border-color: #fff;
+  color: #fff;
+}
+.ruset .r-notification.r-notifAlert .r-btn:hover {
+  background: #fff;
+  color: #000;
+}
+.ruset .r-notification.r-notifInfo {
+  position: static;
+  background: #5a99ff;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.ruset .r-notification.r-notifInfo .r-container {
+  padding-left: 50px;
+  padding-right: 35px;
+}
+.ruset .r-notification.r-notifInfo .r-btn {
+  display: none;
+}
+.ruset .r-notification.r-notifInfo .r-infoIcon {
+  display: block;
+  position: absolute;
+  left: 19px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+}
+.ruset .r-notification.r-notifInfo .r-infoIcon:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border: 1px solid #fff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.ruset .r-notification.r-notifInfo .r-infoIcon:after {
+  content: 'i';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-family: Times, "Times New Roman", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+.ruset .r-notification.r-notifInfo .r-close {
+  display: block;
+  right: 18px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+}
+.ruset .r-notification.r-notifInfo .r-close:before,
+.ruset .r-notification.r-notifInfo .r-close:after {
+  left: 4px;
+  right: 4px;
+  background: #0f50b9;
+}
+.ruset .r-notification.r-notifAbsolute {
+  position: absolute;
+  top: 40px;
+  left: 15%;
+  width: 70%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ruset .r-notification {
+    text-align: right;
+    padding-bottom: 10px;
+  }
+  .ruset .r-notification .r-container {
+    width: 732px;
+    min-height: 46px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .ruset .r-notification .r-content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 82%;
+    text-align: left;
+  }
+  .ruset .r-notification .r-btn {
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .ruset .r-notification.r-notifInfo .r-container {
+    width: auto;
+    min-height: 0;
+  }
+  .ruset .r-notification.r-notifAbsolute {
+    top: 80px;
+  }
+}
+
+
+@media only screen and (min-width: 1140px) {
+  .ruset .r-notification {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .ruset .r-notification .r-container {
+    width: 832px;
+  }
+  .ruset .r-notification .r-content {
+    width: 81%;
+  }
+}

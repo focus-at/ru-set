@@ -1,0 +1,178 @@
+<!DOCTYPE html><html ng-app="app" lang="ru"><head><base href="/"><meta charset="utf-8"><title>Электронные билеты на автобус</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>.ruset,
+    .ng-hide,
+    .ng-cloak{
+      display: none;
+    }</style><!--[if IE 9]>
+      <style>
+        .direction__label{
+          opacity: 1;
+          top: -16px;
+          font-size: 0.875rem;
+        }
+        .input--select{
+          padding-right: 0 !important;
+        }
+        .ie-placeholder{
+          margin-top: -44px;
+          font-size: 1.85rem;
+          color: #cbcbcb;
+        }
+        .ng-valid-required ~ .ie-placeholder{
+          opacity: 0;
+        }
+      </style>
+      <script src="//cdn.rawgit.com/jpillora/xdomain/0.7.3/dist/xdomain.min.js" slave="http://test.api.ru-set.com/proxy.html"></script>
+    <![endif]--><link rel="icon" href="/img/dots.png" type="image/x-icon"><link rel="stylesheet" href="/css/app.min.css?v=ij8bzwq0"><style>.ruset a{
+        color: #066aff;
+        border-color: #c4d4f6;
+      }
+      .r-topBar{
+        color: #fff;
+        background: #221e51;
+        border-color: transparent;
+        border-width: 0;
+      }
+      .r-topBar .r-logo:after{
+        border-left-color: #221e51;
+      }
+      .r-topBar .r-destinations{
+        background: #1e3d74;
+      }
+      .r-topBar .r-destinations:after{
+        border-left-color: #1e3d74;
+      }
+      .r-topBar .r-date{
+        background: #1b538e;
+      }
+      .r-topBar .r-date:after{
+        border-left-color: #1b538e;
+      }
+      .r-topBar .r-passengers{
+        background: #19639f;
+      }
+      .r-topBar .r-passengers:after{
+        border-left-color: #19639f;
+      }
+      .r-topBar .icon-user,
+      .r-topBar .r-price .r-cur,
+      .r-topBar .r-date .r-day,
+      .r-topBar .r-getBackLink{
+        color: #0db7ff;
+      }
+      .r-topBar .r-destinations .r-arrowBtn,
+      .r-topBar .r-destinations .r-arrowBtn:after,
+      .r-topBar .r-destinations .r-arrowBtn:before{
+        background: #0db7ff;
+      }
+      .ruset .r-btn,
+      .calendar__day--active:after{
+        color: #fff;
+        background: #44b72d;
+      }
+      .ruset .r-btn:hover{
+        background: #4bc832;
+      }
+      .calendar__day--active{
+        color: #44b72d !important;
+        outline-color: #44b72d !important;
+      }
+      .calendar__month,
+      .ruset .r-label,
+      .ruset .r-resultsRow .r-hiddenWrapper .r-details h4,
+      .ruset .r-booking h3,
+      .ruset .r-wayLinks a,
+      .ruset .r-resultsHead li.r-asc, .ruset .r-resultsHead li.r-desc,
+      .ruset .r-resultsHead .sortable-head:hover{
+        color: #0078ff;
+      }
+      .link--dotted{
+        border-color: #0078ff;
+      }
+
+      .r-checkbox:checked~.r-checkbox__label:before,
+      input:checked + .r-switch > .r-switch__male,
+      input + .r-switch > .r-switch__female,
+      .ruset .r-radioRound label:after, .ruset .r-radioRound span:after{
+        background: #528fcc;
+        color: #fff;
+      }
+      .ruset .r-radioRound input:checked+label:before, .ruset .r-radioRound input:checked+span:before{
+        border-color: #528fcc;
+      }
+      .ruset .r-wayLinks a span{
+        color: #528fcc;
+      }
+
+      .ruset .r-resultsRow.r-active,
+      .ruset .r-resultsRow.r-selected,
+      .ruset .r-resultsRow.r-active .r-buyBtn,
+      .ruset .r-resultsRow:hover .r-buyBtn{
+        background: #0080ff !important;
+      }
+      .ruset .r-resultsRow:hover .r-buyBtn{
+        box-shadow: inset 0 -2px 0 0 #004d99 !important;
+      }
+      .ruset .r-resultsRow:hover.r-active .r-buyBtn:hover,
+      .ruset .r-resultsRow:hover.r-active .r-buyBtn:hover:after{
+        color: #0080ff !important;
+      }
+
+      .ruset .r-resultsRow .r-buyBtn.r-quickest {
+        border-color: #ff9f4a;
+      }
+      .ruset .r-resultsRow.r-active .r-buyBtn.r-quickest{
+        background: #ff9f4a !important;
+      }
+      .ruset .r-resultsRow.r-active .r-buyBtn.r-quickest:hover,
+      .ruset .r-resultsRow.r-active .r-buyBtn.r-quickest:hover:after{
+        color: #ff9f4a !important;
+      }
+      /*:hover*/
+      .ruset .r-resultsRow:hover .r-buyBtn.r-quickest{
+        box-shadow: inset 0 -2px 0 0 #e36b00 !important;
+      }
+      .ruset .r-resultsRow .r-buyBtn.r-quickest:after {
+        color: #ff9f4a;
+      }
+      .ruset .r-resultsRow .r-buyBtn.r-bestPrice {
+        border-color: #38c321;
+      }
+      .ruset .r-resultsRow.r-active .r-buyBtn.r-bestPrice{
+        background: #38c321 !important;
+      }
+      .ruset .r-resultsRow.r-active .r-buyBtn.r-bestPrice:hover,
+      .ruset .r-resultsRow.r-active .r-buyBtn.r-bestPrice:hover:after{
+        color: #38c321 !important;
+      }
+      .ruset .r-resultsRow:hover .r-buyBtn.r-bestPrice{
+        box-shadow: inset 0 -2px 0 0 #1f6c12 !important;
+      }
+      .ruset .r-resultsRow .r-buyBtn.r-bestPrice:after {
+        color: #38c321;
+      }
+      .ruset .r-resultsRow .r-hiddenWrapper .r-details{
+        background: #ebf0f3;
+      }
+
+      .ruset .r-notification.r-notifInfo{
+        background: #5a99ff;
+      }
+      .ruset .r-notification.r-notifInfo .r-close:before, .ruset .r-notification.r-notifInfo .r-close:after{
+        background: #0f50b9;
+      }</style><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KB9Z48" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KB9Z48');</script><!-- End Google Tag Manager --><!-- BEGIN TRACKJS 
+    <script type="text/javascript">window._trackJs = { token: '6150aaa5f2924d2d95b8590c84790cee' };</script>
+    <script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
+    <!-- END TRACKJS --></head><body ng-controller="MainCtrl"><form class="header ng-cloak" name="header" ng-if="ab=='header'" ng-submit="$emit('submit')" novalidate><div><div class="direction__input__wr"><input type="text" class="header__input" placeholder="Откуда" ng-model="$root.direction[0]" ng-model-options="{ updateOn: 'default blur', debounce: {default: 300, blur: 0} }" required autocomplete="off"></div><span class="direction__switcher" ng-click="$root.direction.reverse()"></span><div class="direction__input__wr"><input type="text" class="header__input" placeholder="Куда" ng-model="$root.direction[1]" ng-model-options="{ updateOn: 'default blur', debounce: {default: 300, blur: 0} }" required autocomplete="off"></div><div class="direction__input__wr"><input type="input" class="header__input header__input--date" placeholder="Когда" style="width: 95px; text-align: center" value="{{!query.payment ? (query.date | date : 'dd.MM.yy') : ''}}" required><div class="calendar" limit="14" date="query.date"></div></div><button type="submit" class="header__input header__input--submit"></button><div class="header__passengers ng-cloak" ng-if="bookParams.info.count">{{bookParams.info.count}}<span class="icon-user"></span></div><div class="header__price" ng-if="bookParams.info.price">{{bookParams.info.price}}<span class="header__price__currency">руб.</span></div></div></form><div ng-if="ab!='header'"><!--<div>123</div>--><section class="r-topBar" style="position: static"><div class="r-container"><a class="r-getBackLink icon-left-open-big ng-hide" tabindex="-1" ng-show="!query.payment && query.date"></a><div class="r-topWrapper ng-cloak" ng-include="'header/header.html'"></div></div></section></div><div class="ruset"><div id="notification" ng-include="'notification/notification.html'"></div><div class="payment" ng-if="query.payment" id="query.runId" phone="phone"></div><div ng-if="ab!='header'" style="margin-top: -36px"><form class="direction" ng-if="!query.payment" name="direction" ng-submit="$emit('submit')" novalidate></form><form class="calendar" ng-if="query.departure && query.arrival" limit="14" date="query.date"></form></div><form class="runs" ng-if="runs" id="query.runId"></form><form class="registration r-wrapper" ng-if="bookParams" name="registration" ng-submit="$emit('submit')" novalidate></form><form class="confirm" ng-if="app.booking" name="confirm" ng-submit="$emit('submit')" novalidate></form><article class="r-wait" ng-if="loader" ng-include="'loader/loader.html'"></article><section class="r-poweredBy">Система Ру-Сеть</section><div class="r-overlay ng-hide" ng-show="popup"></div></div><!--123--><script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script><script src="/js/app_ru.min.js?v=ij8bzwq0"></script><script type="text/javascript">//window.name = '';//redirect init hack
+      angular.module('app.config', []).constant('config', {"token":"1760m-EIGef77ZNRfmUBiVYQkzwdnk7y","siteLogo":"http://ru-set.com/wp-content/themes/raten/files/logo.png","debug":true,"apiHost":"https://api.ru-set.com","baseUrl":"http://localhost:8080"}).run(function(config){
+        config.isFrame = (config.baseUrl && window.self !== window.top);
+      });</script><script type="text/javascript">(function(d, src, type, node, target){
+      target = d.getElementsByTagName(type)[0];
+      node = d.createElement(type);
+      node.async = true;
+      node.src = src;
+      target.parentNode.insertBefore(node, target);
+    })(document, '//code.jivosite.com/script/widget/hNqygOfZTT', 'script');</script></body></html>

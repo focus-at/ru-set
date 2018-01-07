@@ -1,0 +1,116 @@
+<h1 class="r-pageTitle" smooth-scroll offset="100" id="registration">Кто едет?</h1>
+<div ng-include="'notification/notification-info.html'"></div>
+<div ng-show="bookParams">
+  <article class="r-amountWrapper">
+      <div class="r-amountContainer" ng-repeat="(type, arr) in bookParams.passengers" ng-show="bookParams.tariffs[type]">
+        <h2>{{type + 's' | translate}} <span ng-if="type == 'child'">(до 12 лет)</span></h2>
+        <div class="r-amountCounter">
+            <div>{{arr.length}}</div>
+            <span class="r-up" ng-click="add(type)">+</span>
+            <span class="r-down" ng-class="{'r-disable': arr.length == {adult: 1, child: 0}[type]}" ng-click="delete(type)">&ndash;</span>
+        </div>
+      </div>
+  </article>
+  <div class="passengers__data"><!-- ng-show="info.count" -->
+    <h1 class="r-pageTitle">Укажите данные пассажиров</h1>
+    <h3 class="r-subTitle">Данные требуются согласно приказу Минтранспорта РФ 243 от 19.07.2012</h3>
+    <div class="passengers__group" ng-repeat="(title, tickets) in bookParams.passengers" ng-init="index = (title == 'adult') ? 5 : 6">
+      <article class="r-ticketWrapper" ng-repeat="item in tickets track by $index">
+          <div class="r-container">
+              <article class="r-mainArea">
+                  <header>
+                      <h2 class="r-adult" ng-class="({adult: 'r-adult', child: 'r-child'})[title]">{{title | translate}} билет {{$index + 1}}</h2>
+                  </header>
+                  <div class="r-passForm">
+                      <div class="r-pFLName">
+                          <label class="r-label">ФИО (как в документе)</label>
+                          <input type="text" class="r-formItem" tabindex="{{index}}{{$index}}0" name="{{title}}{{$index}}name" ng-model="item.name" required ng-pattern="patterns[item.documentTypeCode].name">
+                          <div class="r-tooltip">{{patterns[item.documentTypeCode].nhint}}</div>
+                          <i class="validate-icon"></i>
+                      </div>
+                      <div class="r-pSexDate">
+                          <label class="r-label r-pSex">
+                            Пол
+                            <input type="checkbox" tabindex="{{index}}{{$index}}1" ng-model="item.gender" ng-true-value="'m'" ng-false-value="'f'">
+                            <div class="r-switch"><span class="r-switch__male">М</span><span class="r-switch__female">Ж</span></div>
+                          </label>
+                          <div class="r-pDateBirth">
+                              <label class="r-label">Дата рождения</label>
+                              <input class="r-formItem r-dateItem" name="{{title}}{{$index}}birthdate" ng-model="item.birthdate" mask="99.99.9999" placeholder="__.__.____" tabindex="{{index}}{{$index}}3" required ng-pattern="patterns.date.pattern">
+                              <div class="r-tooltip">Укажите дату рождения в формате дд.мм.гггг</div>
+                              <i class="validate-icon"></i>
+                          </div>
+                      </div>
+                      <div class="r-pPlaceBirth">
+                          <label class="r-label">Место рождения</label>
+                          <input type="text" class="r-formItem" tabindex="{{index}}{{$index}}4" name="{{title}}{{$index}}birthPlace" ng-model="item.birthPlace" required>
+                          <div class="r-tooltip">Укажите место рождения</div>
+                          <i class="validate-icon"></i>
+                      </div>
+                      <div class="r-pDocumentType">
+                          <label class="r-label">Тип документа</label>
+                          <select class="r-formItem input--select" tabindex="{{index}}{{$index}}5" ng-model="item.documentTypeCode" ng-options="i.docTypeCode as i.docTypeName for i in bookParams.docType.list"></select>
+                      </div>
+                      <div class="r-pSerialDocument">
+                          <label class="r-label">Серия и Номер документа</label>
+                          <input type="text" class="r-formItem r-formItem-number" tabindex="{{index}}{{$index}}6" name="{{title}}{{$index}}documentNumber" ng-model="item.documentNumber" required ng-pattern="patterns[item.documentTypeCode]">
+                          <div class="r-tooltip">
+                            {{patterns[item.documentTypeCode].hint}}
+                            <img ng-src="/img/{{patterns[item.documentTypeCode].image}}" alt="">
+                          </div>
+                          <i class="validate-icon"></i>
+
+                      </div>
+                      <div class="r-pCountry" ng-hide="item.documentTypeCode != 'IP'">
+                          <label class="r-label">Государство выдачи</label>
+                          <select class="r-formItem input--select" tabindex="{{index}}{{$index}}7" ng-model="item.countryCode" ng-options="i.isoCode2 as i.name for i in bookParams.countries"></select>
+                      </div>
+                      <div class="r-pTariff">
+                          <label class="r-label">Тариф</label>
+                          <select class="r-formItem input--select" tabindex="{{index}}{{$index}}8" ng-model="item.tariffCode" ng-options="i.tariffCode as i.tariffName for i in bookParams.tariffs[title].list" ng-change="tariffChanged(title, item.tariffCode, {{item.tariffCode}})"></select>
+                      </div>
+                      <div class="r-pPlace">
+                          <label class="r-label">Место</label>
+                          <select class="r-formItem input--select" tabindex="{{index}}{{$index}}9" ng-model="item.seatNumber" ng-focus="$emit('popup', {event: $event, type: 'place'})" ng-disabled="!bookParams.seatNumbers" ng-options="value as (value | translate) for value in [item.seatNumber]"></select>
+                      </div>
+                  </div>
+              </article>
+              <article class="r-sideArea">
+                  <header>
+                      <h2>Стоимость</h2>
+                  </header>
+                  <!--<div class="r-oldPrice">15,150 руб.</div>-->
+                  <div class="r-price">{{bookParams.tariffs[title].list[item.tariffCode].price.value | currency : 'руб.' : 0}}</div>
+                  <div class="r-addInfo" ng-if="bookParams.tariffs[title].list[item.tariffCode].description">{{bookParams.tariffs[title].list[item.tariffCode].description}}</div>
+                  <span class="icon-trash" ng-click="delete(title, $index)"></span>
+              </article>
+          </div>
+      </article>
+    </div>
+
+    <label class="r-agreement">
+      <input class="r-checkbox" type="checkbox" tabindex="699" name="agree" ng-model="agree" required>
+      <span class="r-checkbox__label icon-ok">Даю согласие на обработку персональных данных в соответствии с законом 152-ФЗ</span>
+    </label>
+
+    <h1 class="r-pageTitle r-pageTitle--contacts" id="contacts">Укажите контактные данные</h1>
+    <h3 class="r-subTitle">Это нужно для того, чтобы мы знали, куда отправлять электронный билет<!-- <span class="r-blockDesktop">Оба поля обязательны</span>--></h3>
+    <article class="r-contactForm">
+        <div class="r-flatInputContainer r-emailInput">
+            <label class="r-hiddenLabel">Ваш e-mail</label>
+            <input class="r-typehead" placeholder="Ваш e-mail" tabindex="700" name="email" ng-model="bookParams.recipientList[0].email" required ng-pattern="patterns.email.pattern">
+            <!--[if IE 9]><div class="ie-placeholder">Ваш e-mail</div><![endif]-->
+            <div class="r-tooltip">Укажите адрес почты. Например, client@mail.ru</div>
+            <i class="validate-icon validate-icon--contacts"></i>
+        </div>
+        <div class="r-flatInputContainer r-phoneInput">
+            <label class="r-hiddenLabel">Ваш мобильный телефон</label>
+            <input class="r-typehead input--phone" placeholder="Ваш мобильный телефон" tabindex="710" name="phone" ng-model="bookParams.recipientList[0].phone" required ng-pattern="patterns.phone">
+            <!--[if IE 9]><div class="ie-placeholder">Ваш мобильный телефон</div><![endif]-->
+            <div class="r-tooltip">{{patterns.phone.hint}}</div>
+            <i class="validate-icon validate-icon--contacts"></i>
+        </div>
+        <button type="submit" class="r-btn" tabindex="720" ng-disabled="$root.loader">Забронировать билет</button>
+    </article>
+  </div>
+</div>

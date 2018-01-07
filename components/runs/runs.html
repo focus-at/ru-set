@@ -1,0 +1,222 @@
+<div smooth-scroll offset="100" id="runs">
+<article class="r-errorBlock" ng-show="runs.runs && !runs.runs.length">
+    <div class="r-container">
+        <p>К сожалению, нет рейсов со свободными местами или вообще нет сообщения по этому маршруту</p>
+        <h1>Попробуйте другой день</h1>
+    </div>
+</article>
+
+<!---->
+<!-- styles
+.r-resultsRow r-disable Неактивный
+.ruset .r-resultsRow .r-buyBtn.r-quickest GREEN
+.ruset .r-resultsRow .r-buyBtn.r-bestPrice ORANGE
+.ruset .r-resultsRow .r-buyBtn.r-optimal PINK
+.ruset .r-resultsRow .r-cell.r-cellSeats.r-last LAST PLACE
+-->
+
+<!--
+<article class="r-scroller">
+    <h4>Сентябрь 2014</h4>
+    <div class="r-sliderWrapper">
+        <span class="r-sliderArrowLeft"></span>
+        <div class="r-swiper-container">
+            <div class="r-swiper-wrapper r-slider">
+                <div class="r-swiper-slide">
+                    <div class="r-mon">22</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-tue">23</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-wen">24</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-thu r-active">25</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-fri">26</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-sat">27</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-sun">27</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-mon">28</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-tue">29</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-wen">30</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-thu">31</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-fri">32</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-sat">33</div>
+                </div>
+                <div class="r-swiper-slide">
+                    <div class="r-sun">34</div>
+                </div>
+            </div>
+        </div>
+        <span class="r-sliderArrowRight"></span>
+    </div>
+</article>
+-->
+<section class="r-wrapper" ng-show="runs.runs.length">
+    <h1 class="r-pageTitle">
+      <ng-pluralize count="runs.counts.all.count" when=" {one: 'Найден {} рейс', few: 'Найдено {} рейса', many: 'Найдено {} рейсов'}"></ng-pluralize>
+    </h1>
+    <h3 class="r-subTitle">Всё указанное время – местное</h3>
+    <article class="r-textCenter r-chooseResults" ng-show="runs.counts.all.count != runs.counts.free.count">
+        <label class="r-radioRound" ng-repeat="(label, item) in ::runs.counts">
+            <input class="r-visuallyhidden" type="radio" ng-model="filter.free" ng-value="item.value" ng-change="applyFilters()">
+            <span>{{label | translate}} ({{item.count}})</span>
+        </label>
+    </article>
+    <article class="r-resultsWrapper">
+        <ul class="r-resultsHead">
+            <li class="r-cellStart sortable-head" ng-class="({'departureDateTime': 'r-desc', '-departureDateTime': 'r-asc'})[sort]" ng-click="changeSort('departureDateTime')"><span>Отправление</span></li>
+            <li class="r-cellRoad sortable-head" ng-class="({'timeInWay': 'r-desc', '-timeInWay': 'r-asc'})[sort]" ng-click="changeSort('timeInWay')"><span>В пути</span></li>
+            <li class="r-cellFinish sortable-head" ng-class="({'arrivalDateTime': 'r-desc', '-arrivalDateTime': 'r-asc'})[sort]" ng-click="changeSort('arrivalDateTime')"><span>Прибытие</span></li>
+            <li class="r-cellTrip"><span>Рейс</span></li>
+            <li class="r-cellPrice sortable-head" ng-class="({'price': 'r-desc', '-price': 'r-asc'})[sort]" ng-click="changeSort('price')"><span>Стоимость</span></li>
+            <li class="r-cellSeats"><span>Места</span></li>
+        </ul>
+        <!--track by item.runId-->
+        <article class="r-resultsRow r-longText" ng-repeat="item in filteredData | orderBy:sorter" ng-class="{'r-selected': item.active, 'r-active': item.open, 'r-disable': !item.freeSeatsCount}">
+            <div class="r-visibleRow" ng-click="open(item)">
+                <div class="r-cell r-cellStart">
+                    {{::(item.departureDateTime | date : 'H:mm') || '--:--'}}
+                    <div class="r-destination">
+                      {{::item.departureBusStop.name}}<span ng-show="::item.departureBusStop.description">, {{::item.departureBusStop.description}}</span>
+                    </div>
+                </div>
+                <div class="r-cell r-cellRoad">
+                    <div class="r-time">{{::item.timeInWay | timeInWay}}&#160;</div>
+                    <div class="r-line"></div>
+                </div>
+                <div class="r-cell r-cellFinish">
+                    {{::(item.arrivalDateTime | date : 'H:mm') || '--:--'}}
+                    <div class="r-anotherDayDestination" ng-show="::item.arrivalDateTime | onNextDay : item.departureDateTime">{{::item.arrivalDateTime | date : 'd MMM'}}</div>
+                    <div class="r-destination">
+                      {{::item.arrivalBusStop.name}}<span ng-show="::item.arrivalBusStop.description">, {{::item.arrivalBusStop.description}}</span>
+                    </div>
+                </div>
+                <div class="r-cell r-cellTrip">
+                    <span ng-show="::item.runNumber">{{::item.runNumber}}</span> {{::item.runName}}
+                    <div>{{::item.transport}} <span ng-show="::item.carrier">({{::item.carrier}})</span></div>
+                </div>
+                <div class="r-cell r-cellPrice">
+                    <button type="submit" class="runs__buy r-buyBtn" data-item-id="{{::item.runId}}" ng-class="{'r-quickest': item.timeInWay == isFastest, 'r-bestPrice': item.price.value == isCheapest}">
+                        <!-- , 'r-optimal': item.timeInWay == isOptimal[0] && item.price.value == isOptimal[1]-->
+                        {{::item.price.value | currency : '' : 0}}<span class="r-cur">руб.</span>
+                    </button>
+                    <!--<div class="r-advancedSeats">Автобус уехал</div>-->
+                </div>
+                <div class="r-cell r-cellSeats" ng-class="{'r-last': item.freeSeatsCount == 1}">
+                  {{::item.freeSeatsCount}} <span ng-show="::item.seatsCapacity">из {{::item.seatsCapacity}}</span>
+                </div>
+            </div>
+            <article class="r-hiddenWrapper">
+                <div class="r-details">
+                    <span class="r-closeDetails" ng-click="open(item)">
+                        <span>Свернуть</span>
+                        <i class="r-close"></i>
+                    </span>
+
+                    <h4 ng-class="{'icon-spin3 animate-spin': item.route.loading, 'link--dotted': !item.route}" ng-click="!item.route && loadRoute(item)">{{item.route.loading ? 'ЗАГРУЗКА МАРШРУТА' : 'МАРШРУТ'}} РЕЙСА</h4>
+                    <i ng-show="!item.route.points">{{item.route.routePointsAsString}}<br><br></i>
+                    <!-- <p>Данный вариант расписания действует: <strong>ежедневно</strong>.</p>-->
+                    <div ng-if="item.route.points">
+                      <p class="r-inTrip" ng-show="::timeInWay"><strong>В пути: {{::item.timeInWay | timeInWay}}</strong></p>
+                      <p class="r-hiddenForDescktop"><span ng-show="::item.runNumber">{{::item.runNumber}}</span> {{::item.runName}}</p>
+                      <article class="r-mobileRoute">
+                          <h4>Маршрут</h4>
+                          <div class="r-stop" ng-repeat="point in ::item.route.points track by $index">
+                              <h5 ng-bind="::point.pointName"></h5>
+                              <p><!-- много условий запятые, не ставить пробел если только часы-->
+                                <span ng-show="::point.arrivalTime">Прибытие: {{point.onNextDay ? '+' + point.onNextDay + 'д ': ''}} {{::point.arrivalTime}}<br></span>
+                                <span ng-show="::point.timeInPath">В пути: {{::point.timeInPath | timeInWay}}<br></span>
+                                <span ng-show="::point.departureTime">Отправление: {{::point.departureTime}}<br></span>
+                                <span ng-show="::point.stopTime">Стоянка: {{::point.stopTime | timeInWay}}</span>
+                              </p>
+                          </div>
+                      </article>
+                      <article class="r-route">
+                          <div class="r-tHead">
+                              <table>
+                                  <tr>
+                                      <th style="width: 38%">Маршрут</th>
+                                      <th style="width: 11.83%">Прибытие</th>
+                                      <th style="width: 17.32%">В пути</th>
+                                      <th style="width: 18.59%">Отправление</th>
+                                      <th style="width: 14.65%">Стоянка</th>
+                                  </tr>
+                              </table>
+                          </div>
+                          <div class="r-tBody">
+                              <table>
+                                  <tr ng-repeat="point in ::item.route.points track by $index">
+                                      <td style="width: 38%"><strong ng-bind="::point.pointName"></strong></td>
+                                      <td style="width: 11.83%">{{point.onNextDay ? '+' + point.onNextDay + 'д ': ''}}<strong ng-bind="::point.arrivalTime"></strong></td>
+                                      <td style="width: 17.32%" ng-bind="::point.timeInPath | timeInWay"></td>
+                                      <td style="width: 18.59%"><strong ng-bind="::point.departureTime"></strong></td>
+                                      <td style="width: 14.65%" ng-bind="::point.stopTime | timeInWay"></td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </article>
+                    </div>
+                    <!--
+                    <div class="r-datePicker"></div>
+-->
+                    <article class="r-transport" ng-if="::(item.transport || item.carrier || item.comment)">
+                        <h4>ТРАНСПОРТ</h4>
+                        <div ng-show="::item.transport || item.comment">
+                          <div class="r-label">Автобус:</div>
+                          <div class="r-value">
+                              {{::item.transport}}
+                              <i ng-bind="::item.comment"></i>
+                          </div>
+                        </div>
+                        <div ng-show="::item.carrier">
+                          <div class="r-label">Перевозчик:</div>
+                          <div class="r-value" ng-bind="::item.carrier"></div>
+                        </div>
+                    </article>
+                    <article class="r-priceRates">
+                        <h4>Цены и тарифы</h4>
+                        <div class="r-tablePrice">
+                          <div class="r-th">Тариф</div>
+                          <div class="r-td" ng-bind="::item.price.parts.tariff | currency"></div>
+                          <div class="r-th">Сервисный сбор</div>
+                          <div class="r-td" ng-bind="::item.price.parts.commission | currency"></div>
+                        </div>
+                        <!--<p><a href="#" tabindex="-1">См. тарифные требования</a></p>-->
+                    </article>
+
+                    <article class="r-getBack" ng-if="::item.refundCondition">
+                        <h4 class="link--dotted" ng-click="item.showCondition=!item.showCondition">Условия возврата</h4>
+                        <p ng-show="item.showCondition"><i ng-bind="::item.refundCondition"></i></p>
+                    </article>
+
+                </div>
+<!--
+                <div class="r-map" data="item">
+                  <div class="r-clicker"></div>
+                </div>
+-->
+            </article>
+        </article>
+        <!-- /repeat-->
+    </article>
+</section>
+</div>

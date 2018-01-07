@@ -1,0 +1,156 @@
+<section class="r-detailsWrapper" style="top: 0">
+    <header>
+        <h2 class="r-detailsTitle">Данные<span> вашего</span> заказа</h2>
+        <nav class="r-detailsNav">
+            <span class="icon-trash"></span>
+            <span class="icon-info-circle"></span>
+            <span class="icon-export"></span>
+        </nav>
+    </header>
+
+    <section class="r-booking">
+        <article ng-if="app.direction[0] && app.direction[1]" class="r-routeInfo">
+            <a href="#" class="r-editLink">Изменить</a>
+            <h3>Ваш маршрут</h3>
+            <div class="r-purpose">Москва</div>
+            <span class="r-wayArrow"></span>
+            <div class="r-purpose">Санкт-Петербург</div>
+            <div class="r-hiddenHover">
+                <span class="r-arrowBtn r-reverse"></span>Изменить маршрут
+            </div>
+        </article>
+        <article ng-if="route.direction" class="r-dateInfo">
+            <a href="#" class="r-editLink">Изменить</a>
+            <h3>Дата</h3>
+            <span class="r-data">19</span> <span class="r-month">Сентября</span> <span class="r-monthShort">Сент</span>
+            <div class="r-hiddenHover">
+                <span class="r-arrowBtn r-reverse"></span>Дата
+            </div>
+        </article>
+        <article class="r-tripInfo">
+            <a href="#" class="r-editLink">Изменить</a>
+            <div class="r-start">
+                <h3>Отправление</h3>
+                <div class="r-cityStation">
+                    Москва, <span>Центральный вокзал</span>
+                </div>
+                <div class="r-time">16:00 <span>(16:00 МСК)</span></div>
+                <div class="r-date">25 декабря 2014</div>
+            </div>
+            <div class="r-timeTrip">
+                <h3>В пути</h3>
+                <div class="r-time">5ч 20м</div>
+                <div class="r-line"></div>
+            </div>
+            <div class="r-finish">
+                <h3>Прибытие</h3>
+                <div class="r-cityStation">
+                    Санкт-Петербург, <span>Московский автовокзал</span>
+                </div>
+                <div class="r-time">01:00 <span>(01:00 МСК)</span></div>
+                <div class="r-date">26 декабря 2014</div>
+            </div>
+
+            <div class="r-hiddenHover">
+                <span class="r-arrowBtn r-reverse"></span>Выбрать другой рейс
+            </div>
+        </article>
+        <article class="r-passengersInfo">
+            <a href="#" class="r-editLink">Изменить</a>
+            <h3>Пассажиры</h3>
+            <div class="r-pass">
+                <div class="r-section1">
+                    Редькина Татьяна Павловна
+                    <span># 43453425445</span>
+                </div>
+                <div class="r-section2">
+                    <span>Стандартный тариф</span>
+                    Место #15
+                </div>
+                <div class="r-section3">
+                    15,150 руб.
+                </div>
+            </div>
+            <div class="r-pass">
+                <div class="r-section1">
+                    Редькин Илья Александрович
+                    <span># 43453325445</span>
+                </div>
+                <div class="r-section2">
+                    <span>Пенсионный тариф</span>
+                    Место #16
+                </div>
+                <div class="r-section3">
+                    <span>15,150 руб.</span>
+                    8,000 руб.
+                </div>
+            </div>
+            <div class="r-pass">
+                <div class="r-section1">
+                    Редькина Юлия Степановна
+                    <span># 43453325445</span>
+                </div>
+                <div class="r-section2">
+                    <span>Младенец без места</span>
+                </div>
+                <div class="r-section3">
+                    0 руб.
+                </div>
+            </div>
+
+            <div class="r-hiddenHover">
+                <span class="r-arrowBtn r-reverse"></span>Редактировать состав пассажиров и льготы
+            </div>
+        </article>
+        <div class="r-groupWrapper">
+
+            <article class="r-trafficInfo">
+                <a href="#" class="r-editLink">Изменить</a>
+                <h3>Транспорт</h3>
+                <div class="r-trf">
+                    <h4>Рейс:</h4>
+                    <p>#3442 Сочи - воркута</p>
+                </div>
+                <div class="r-trf">
+                    <h4>Автобус:</h4>
+                    <p>Неоплан-77 госномер 23-23 МОС <span>(туалет, кондиционер, питьевая вода, телевизор, телефон)</span></p>
+                </div>
+                <div class="r-trf">
+                    <h4>Перевозчик:</h4>
+                    <p>ИП Касперский И. И.</p>
+                </div>
+
+                <div class="r-hiddenHover">
+                    <span class="r-arrowBtn r-reverse"></span>Выбрать другой рейс
+                </div>
+            </article>
+            <article class="r-priceInfo">
+                <div class="r-priceCalculate">
+                    <span class="r-labelC">Стоимость<span> билетов</span>:</span>
+                    <span class="r-valueC">923,150 руб.</span>
+                </div>
+                <div class="r-priceAdd">
+                    <span class="r-labelC">Добавочная стоимость номер один:</span>
+                    <span class="r-valueC">100 руб.</span>
+                </div>
+                <div class="r-priceAdd">
+                    <span class="r-labelC">Комиссионные наши номер два:</span>
+                    <span class="r-valueC">2, 000 руб.</span>
+                </div>
+                <div class="r-priceAdd">
+                    <span class="r-labelC">Номер три, скидка:</span>
+                    <span class="r-valueC">-18 руб.</span>
+                </div>
+                <div class="r-priceFinal">
+                    <span class="r-labelC">Итого к оплате:</span>
+                    <span class="r-valueC">925,232 руб.</span>
+                </div>
+            </article>
+            <article class="r-getBackInfo">
+                <h3>Возврат билета</h3>
+                <p class="r-noBack">Возврат билета невозможен для данного перевозчика.</p>
+            </article>
+        </div>
+        <button type="button" class="r-btn r-btnReserve">Продолжить оформление билета <span class="r-arrowBtn"></span></button>
+    </section>
+</section>
